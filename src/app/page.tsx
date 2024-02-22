@@ -1,22 +1,45 @@
 "use client";
-
-import Image from "next/image";
+import { groupSequences } from "@/utils";
 import { useEffect, useState } from "react";
 
 const data = require("../data/results.json");
+
+type _Statement = any;
+type _Sequence = {
+  kind: string;
+  sequenceId: string;
+  discrepancies: _Discrepancy[];
+};
+type _Discrepancy = any;
 
 export default function Home() {
   const discrepancies = data.discrepancies[0].discrepancies;
   const executedStatements = discrepancies.filter(
     (d) => d.eventKind === "ExecutedStatement"
   );
-  console.log(executedStatements);
+  const { ExecutedStatement: sequences } = groupSequences(executedStatements);
+  console.log({ executedStatements, sequences });
 
   useEffect(() => {}, []);
   return (
     <div className="p-4">
-      <div className="flex flex-col gap-2">
-        {executedStatements.map((s, i) => (
+      <div className="flex flex-col gap-4">
+        {Object.values(sequences).map((s, i) => (
+          <Sequence sequence={s} key={i} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function Sequence({ sequence }: { sequence: _Sequence }) {
+  return (
+    <div>
+      <div className="text-gray-500">
+        {sequence.kind} {sequence.sequenceId}
+      </div>
+      <div className="pl-4">
+        {sequence.discrepancies.map((s, i) => (
           <Statement statement={s} key={i} />
         ))}
       </div>
@@ -24,7 +47,7 @@ export default function Home() {
   );
 }
 
-function Statement({ statement }: { statement: any }) {
+function Statement({ statement }: { statement: _Statement }) {
   const [expanded, setExpanded] = useState(false);
 
   const focusLine = statement.event.description.line;
@@ -37,9 +60,6 @@ function Statement({ statement }: { statement: any }) {
         <FunctionOutline
           outline={statement.event.description.functionOutline}
         />
-        <div className="text-gray-500">
-          {statement.kind} {statement.sequenceId}
-        </div>
       </div>
       {expanded ? (
         <FramePoints
@@ -63,7 +83,7 @@ function FramePoints({
   focusLine: number;
 }) {
   return (
-    <div className="pl-4 overflow-auto">
+    <div className="pl-4 overflow-auto border-l-gray-700 border-l">
       {points.map((p, i) => (
         <Point key={i} point={p} focusLine={focusLine} />
       ))}
