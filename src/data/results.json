@@ -1,6 +1,8 @@
 {
-  "timestamp": "2024-02-21T23:40:28.045Z",
-  "fullName": ["root-cause-analysis"],
+  "timestamp": "2024-02-22T19:57:23.884Z",
+  "fullName": [
+    "root-cause-analysis"
+  ],
   "name": "RootCauseAnalysisResult",
   "level": "debug",
   "message": "RootCauseAnalysisResult",
@@ -58,8 +60,14 @@
           "testId": 0,
           "attempt": 4
         },
-        "start": { "point": "0", "time": 0 },
-        "end": { "point": "17524001899590177980379422179459072", "time": 6231 }
+        "start": {
+          "point": "0",
+          "time": 0
+        },
+        "end": {
+          "point": "17524001899590177980379422179459072",
+          "time": 6231
+        }
       },
       "successRun": {
         "id": {
@@ -67,8 +75,14 @@
           "testId": 0,
           "attempt": 1
         },
-        "start": { "point": "0", "time": 0 },
-        "end": { "point": "51273931489324445766687343912157184", "time": 19026 }
+        "start": {
+          "point": "0",
+          "time": 0
+        },
+        "end": {
+          "point": "51273931489324445766687343912157184",
+          "time": 19026
+        }
       },
       "additionalSuccessRuns": [],
       "discrepancies": [
@@ -78,9 +92,21 @@
           "sequenceId": "ExecutedStatement:0",
           "event": {
             "location": [
-              { "column": 73983, "line": 109, "sourceId": "48" },
-              { "line": 19935, "column": 6, "sourceId": "pp48" },
-              { "line": 52, "column": 25, "sourceId": "o48-290-6eb15c-ac92b3" }
+              {
+                "column": 73983,
+                "line": 109,
+                "sourceId": "48"
+              },
+              {
+                "line": 19935,
+                "column": 6,
+                "sourceId": "pp48"
+              },
+              {
+                "line": 52,
+                "column": 25,
+                "sourceId": "o48-290-6eb15c-ac92b3"
+              }
             ],
             "key": "\"file:\") {\n      description += ` of ${url.hostname}`;\n    }\n  } catch {\n    // ignore invalid URLs\n",
             "point": "1947111322150223306866479299821688",
@@ -696,11 +722,26 @@
               "functionOutline": {
                 "name": "RecordingHead",
                 "location": {
-                  "begin": { "line": 43, "column": 0 },
-                  "end": { "line": 92, "column": 1 }
+                  "begin": {
+                    "line": 43,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 92,
+                    "column": 1
+                  }
                 },
-                "parameters": ["{}"],
-                "body": { "line": 43, "column": 52 }
+                "parameters": [
+                  "{}"
+                ],
+                "body": {
+                  "line": 43,
+                  "column": 52
+                },
+                "breakpointLocation": {
+                  "line": 44,
+                  "column": 2
+                }
               }
             }
           },
@@ -759,7 +800,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeAll",
-              "value": { "kind": "Literal", "v": [] }
+              "value": {
+                "kind": "Literal",
+                "v": []
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -778,7 +822,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeEach",
-              "value": { "kind": "Literal", "v": [] }
+              "value": {
+                "kind": "Literal",
+                "v": []
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -797,7 +844,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.source.title",
-              "value": { "kind": "Literal", "v": "cypress/e2e/adding-spec.ts" }
+              "value": {
+                "kind": "Literal",
+                "v": "cypress/e2e/adding-spec.ts"
+              }
             },
             "alternate": {
               "kind": "ResponseJSON",
@@ -826,14 +876,20 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.source.commit.title",
-              "value": { "kind": "Literal", "v": "use replay" }
+              "value": {
+                "kind": "Literal",
+                "v": "use replay"
+              }
             },
             "alternate": {
               "kind": "ResponseJSON",
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.source.commit.title",
-              "value": { "kind": "Literal", "v": "Run without diagnostic mode" }
+              "value": {
+                "kind": "Literal",
+                "v": "Run without diagnostic mode"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -852,7 +908,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.source.trigger.name",
-              "value": { "kind": "Literal", "v": "push" }
+              "value": {
+                "kind": "Literal",
+                "v": "push"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -871,7 +930,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.source.trigger.name",
-              "value": { "kind": "Type", "type": "string" }
+              "value": {
+                "kind": "Type",
+                "type": "string"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -890,7 +952,9 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.source.trigger.name",
-              "value": { "kind": "Any" }
+              "value": {
+                "kind": "Any"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -909,14 +973,20 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.source.trigger.workflow",
-              "value": { "kind": "Literal", "v": "ci" }
+              "value": {
+                "kind": "Literal",
+                "v": "ci"
+              }
             },
             "alternate": {
               "kind": "ResponseJSON",
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.source.trigger.workflow",
-              "value": { "kind": "Literal", "v": "7866783975" }
+              "value": {
+                "kind": "Literal",
+                "v": "7866783975"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -935,7 +1005,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.owner.id",
-              "value": { "kind": "Type", "type": "string" }
+              "value": {
+                "kind": "Type",
+                "type": "string"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -954,7 +1027,9 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.owner.id",
-              "value": { "kind": "Any" }
+              "value": {
+                "kind": "Any"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -973,7 +1048,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.owner.name",
-              "value": { "kind": "Literal", "v": "Ryan Duffy" }
+              "value": {
+                "kind": "Literal",
+                "v": "Ryan Duffy"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -992,7 +1070,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.owner.name",
-              "value": { "kind": "Type", "type": "string" }
+              "value": {
+                "kind": "Type",
+                "type": "string"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1011,7 +1092,9 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.owner.name",
-              "value": { "kind": "Any" }
+              "value": {
+                "kind": "Any"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1030,7 +1113,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.owner.picture",
-              "value": { "kind": "Type", "type": "string" }
+              "value": {
+                "kind": "Type",
+                "type": "string"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1049,7 +1135,9 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.owner.picture",
-              "value": { "kind": "Any" }
+              "value": {
+                "kind": "Any"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1068,7 +1156,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.owner.internal",
-              "value": { "kind": "Literal", "v": true }
+              "value": {
+                "kind": "Literal",
+                "v": true
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1087,7 +1178,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.owner.internal",
-              "value": { "kind": "Type", "type": "boolean" }
+              "value": {
+                "kind": "Type",
+                "type": "boolean"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1106,7 +1200,9 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.owner.internal",
-              "value": { "kind": "Any" }
+              "value": {
+                "kind": "Any"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1125,7 +1221,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.owner.__typename",
-              "value": { "kind": "Literal", "v": "User" }
+              "value": {
+                "kind": "Literal",
+                "v": "User"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1144,7 +1243,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.owner.__typename",
-              "value": { "kind": "Type", "type": "string" }
+              "value": {
+                "kind": "Type",
+                "type": "string"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1163,7 +1265,9 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.owner.__typename",
-              "value": { "kind": "Any" }
+              "value": {
+                "kind": "Any"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1182,7 +1286,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.url",
-              "value": { "kind": "Type", "type": "string" }
+              "value": {
+                "kind": "Type",
+                "type": "string"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1201,7 +1308,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.operations.scriptDomains",
-              "value": { "kind": "Literal", "v": [] }
+              "value": {
+                "kind": "Literal",
+                "v": []
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1220,7 +1330,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.operations.scriptDomains",
-              "value": { "kind": "Type", "type": "array" }
+              "value": {
+                "kind": "Type",
+                "type": "array"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1239,7 +1352,9 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.operations.scriptDomains",
-              "value": { "kind": "Any" }
+              "value": {
+                "kind": "Any"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1258,7 +1373,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.run.mode",
-              "value": { "kind": "Literal", "v": "record" }
+              "value": {
+                "kind": "Literal",
+                "v": "record"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1277,7 +1395,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.run.mode",
-              "value": { "kind": "Type", "type": "string" }
+              "value": {
+                "kind": "Type",
+                "type": "string"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1296,7 +1417,9 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.run.mode",
-              "value": { "kind": "Any" }
+              "value": {
+                "kind": "Any"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1315,7 +1438,9 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeAll[]",
-              "value": { "kind": "Any" }
+              "value": {
+                "kind": "Any"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1334,7 +1459,9 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeAll[].data",
-              "value": { "kind": "Any" }
+              "value": {
+                "kind": "Any"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1353,7 +1480,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeAll[].data.id",
-              "value": { "kind": "Literal", "v": "3" }
+              "value": {
+                "kind": "Literal",
+                "v": "3"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1372,7 +1502,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeAll[].data.id",
-              "value": { "kind": "Type", "type": "string" }
+              "value": {
+                "kind": "Type",
+                "type": "string"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1391,7 +1524,9 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeAll[].data.id",
-              "value": { "kind": "Any" }
+              "value": {
+                "kind": "Any"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1410,7 +1545,9 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeAll[].data.error",
-              "value": { "kind": "Any" }
+              "value": {
+                "kind": "Any"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1429,7 +1566,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeAll[].data.scope",
-              "value": { "kind": "Literal", "v": [] }
+              "value": {
+                "kind": "Literal",
+                "v": []
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1448,7 +1588,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeAll[].data.scope",
-              "value": { "kind": "Type", "type": "array" }
+              "value": {
+                "kind": "Type",
+                "type": "array"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1467,7 +1610,9 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeAll[].data.scope",
-              "value": { "kind": "Any" }
+              "value": {
+                "kind": "Any"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1486,7 +1631,9 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeAll[].data.command",
-              "value": { "kind": "Any" }
+              "value": {
+                "kind": "Any"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1505,7 +1652,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeAll[].data.command.name",
-              "value": { "kind": "Literal", "v": "then" }
+              "value": {
+                "kind": "Literal",
+                "v": "then"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1524,7 +1674,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeAll[].data.command.name",
-              "value": { "kind": "Type", "type": "string" }
+              "value": {
+                "kind": "Type",
+                "type": "string"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1543,7 +1696,9 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeAll[].data.command.name",
-              "value": { "kind": "Any" }
+              "value": {
+                "kind": "Any"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1562,7 +1717,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeAll[].data.command.arguments",
-              "value": { "kind": "Literal", "v": [] }
+              "value": {
+                "kind": "Literal",
+                "v": []
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1581,7 +1739,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeAll[].data.command.arguments",
-              "value": { "kind": "Type", "type": "array" }
+              "value": {
+                "kind": "Type",
+                "type": "array"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1600,7 +1761,9 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeAll[].data.command.arguments",
-              "value": { "kind": "Any" }
+              "value": {
+                "kind": "Any"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1619,7 +1782,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeAll[].data.category",
-              "value": { "kind": "Literal", "v": "command" }
+              "value": {
+                "kind": "Literal",
+                "v": "command"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1638,7 +1804,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeAll[].data.category",
-              "value": { "kind": "Type", "type": "string" }
+              "value": {
+                "kind": "Type",
+                "type": "string"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1657,7 +1826,9 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeAll[].data.category",
-              "value": { "kind": "Any" }
+              "value": {
+                "kind": "Any"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1676,7 +1847,9 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeAll[].data.parentId",
-              "value": { "kind": "Any" }
+              "value": {
+                "kind": "Any"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1695,7 +1868,9 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeEach[]",
-              "value": { "kind": "Any" }
+              "value": {
+                "kind": "Any"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1714,7 +1889,9 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeEach[].data",
-              "value": { "kind": "Any" }
+              "value": {
+                "kind": "Any"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1733,7 +1910,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeEach[].data.id",
-              "value": { "kind": "Type", "type": "string" }
+              "value": {
+                "kind": "Type",
+                "type": "string"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1752,7 +1932,9 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeEach[].data.id",
-              "value": { "kind": "Any" }
+              "value": {
+                "kind": "Any"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1771,7 +1953,9 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeEach[].data.error",
-              "value": { "kind": "Any" }
+              "value": {
+                "kind": "Any"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1790,7 +1974,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeEach[].data.scope",
-              "value": { "kind": "Type", "type": "array" }
+              "value": {
+                "kind": "Type",
+                "type": "array"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1809,7 +1996,9 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeEach[].data.scope",
-              "value": { "kind": "Any" }
+              "value": {
+                "kind": "Any"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1828,7 +2017,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeEach[].data.scope[]",
-              "value": { "kind": "Type", "type": "string" }
+              "value": {
+                "kind": "Type",
+                "type": "string"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1847,7 +2039,9 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeEach[].data.scope[]",
-              "value": { "kind": "Any" }
+              "value": {
+                "kind": "Any"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1866,7 +2060,9 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeEach[].data.command",
-              "value": { "kind": "Any" }
+              "value": {
+                "kind": "Any"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1885,7 +2081,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeEach[].data.command.name",
-              "value": { "kind": "Type", "type": "string" }
+              "value": {
+                "kind": "Type",
+                "type": "string"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1904,7 +2103,9 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeEach[].data.command.name",
-              "value": { "kind": "Any" }
+              "value": {
+                "kind": "Any"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1923,7 +2124,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeEach[].data.command.arguments",
-              "value": { "kind": "Type", "type": "array" }
+              "value": {
+                "kind": "Type",
+                "type": "array"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1942,7 +2146,9 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeEach[].data.command.arguments",
-              "value": { "kind": "Any" }
+              "value": {
+                "kind": "Any"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1961,7 +2167,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeEach[].data.command.arguments[]",
-              "value": { "kind": "Literal", "v": "/" }
+              "value": {
+                "kind": "Literal",
+                "v": "/"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1980,7 +2189,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeEach[].data.command.arguments[]",
-              "value": { "kind": "Type", "type": "string" }
+              "value": {
+                "kind": "Type",
+                "type": "string"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -1999,7 +2211,9 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeEach[].data.command.arguments[]",
-              "value": { "kind": "Any" }
+              "value": {
+                "kind": "Any"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -2018,7 +2232,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeEach[].data.category",
-              "value": { "kind": "Literal", "v": "command" }
+              "value": {
+                "kind": "Literal",
+                "v": "command"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -2037,7 +2254,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeEach[].data.category",
-              "value": { "kind": "Type", "type": "string" }
+              "value": {
+                "kind": "Type",
+                "type": "string"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -2056,7 +2276,9 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeEach[].data.category",
-              "value": { "kind": "Any" }
+              "value": {
+                "kind": "Any"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -2075,7 +2297,9 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.tests[].events.beforeEach[].data.parentId",
-              "value": { "kind": "Any" }
+              "value": {
+                "kind": "Any"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -2104,7 +2328,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.test.source.title",
-              "value": { "kind": "Literal", "v": "cypress/e2e/adding-spec.ts" }
+              "value": {
+                "kind": "Literal",
+                "v": "cypress/e2e/adding-spec.ts"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -2123,7 +2350,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.source.commit.url",
-              "value": { "kind": "Type", "type": "string" }
+              "value": {
+                "kind": "Type",
+                "type": "string"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -2142,7 +2372,9 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.source.commit.url",
-              "value": { "kind": "Any" }
+              "value": {
+                "kind": "Any"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -2161,7 +2393,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.source.commit.user",
-              "value": { "kind": "Literal", "v": "ryanjduffy" }
+              "value": {
+                "kind": "Literal",
+                "v": "ryanjduffy"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -2180,7 +2415,10 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.source.commit.user",
-              "value": { "kind": "Type", "type": "string" }
+              "value": {
+                "kind": "Type",
+                "type": "string"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -2199,7 +2437,9 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.source.commit.user",
-              "value": { "kind": "Any" }
+              "value": {
+                "kind": "Any"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -2218,14 +2458,20 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.source.commit.title",
-              "value": { "kind": "Literal", "v": "Run without diagnostic mode" }
+              "value": {
+                "kind": "Literal",
+                "v": "Run without diagnostic mode"
+              }
             },
             "alternate": {
               "kind": "ResponseJSON",
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.source.commit.title",
-              "value": { "kind": "Literal", "v": "use replay" }
+              "value": {
+                "kind": "Literal",
+                "v": "use replay"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -2244,14 +2490,20 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.source.trigger.workflow",
-              "value": { "kind": "Literal", "v": "7866783975" }
+              "value": {
+                "kind": "Literal",
+                "v": "7866783975"
+              }
             },
             "alternate": {
               "kind": "ResponseJSON",
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.source.trigger.workflow",
-              "value": { "kind": "Literal", "v": "ci" }
+              "value": {
+                "kind": "Literal",
+                "v": "ci"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -2270,7 +2522,9 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.x-replay-diagnostics.RECORD_REPLAY_DISABLE_ASSERTS",
-              "value": { "kind": "Any" }
+              "value": {
+                "kind": "Any"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -2289,7 +2543,9 @@
               "requestUrl": "https://api.replay.io/v1/graphql",
               "requestTag": "GetRecording",
               "path": ".data.recording.metadata.x-replay-diagnostics.RECORD_REPLAY_DISABLE_SOURCEMAP_COLLECTION",
-              "value": { "kind": "Any" }
+              "value": {
+                "kind": "Any"
+              }
             }
           },
           "commonPoint": "1622592768526375001849762416689276"
@@ -2300,9 +2556,21 @@
           "sequenceId": "ExecutedStatement:1",
           "event": {
             "location": [
-              { "column": 34954, "line": 984, "sourceId": "48" },
-              { "line": 61282, "column": 8, "sourceId": "pp48" },
-              { "line": 188, "column": 6, "sourceId": "o48-751-05248d-226b67" }
+              {
+                "column": 34954,
+                "line": 984,
+                "sourceId": "48"
+              },
+              {
+                "line": 61282,
+                "column": 8,
+                "sourceId": "pp48"
+              },
+              {
+                "line": 188,
+                "column": 6,
+                "sourceId": "o48-751-05248d-226b67"
+              }
             ],
             "key": "if (refresh) {\n        this.reset();\n      } else {\n        return;\n      }\n    }\n\n    this.isTokenR",
             "point": "3894222644395571861235537071309003",
@@ -2978,12 +3246,27 @@
               "functionOutline": {
                 "name": "update",
                 "location": {
-                  "begin": { "line": 175, "column": 2 },
-                  "end": { "line": 229, "column": 3 }
+                  "begin": {
+                    "line": 175,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 229,
+                    "column": 3
+                  }
                 },
-                "parameters": ["refresh"],
-                "body": { "line": 175, "column": 41 },
-                "className": "TokenManager"
+                "parameters": [
+                  "refresh"
+                ],
+                "body": {
+                  "line": 175,
+                  "column": 41
+                },
+                "className": "TokenManager",
+                "breakpointLocation": {
+                  "line": 176,
+                  "column": 4
+                }
               }
             }
           },
@@ -2995,9 +3278,21 @@
           "sequenceId": "ExecutedStatement:1",
           "event": {
             "location": [
-              { "column": 34960, "line": 984, "sourceId": "48" },
-              { "line": 61283, "column": 10, "sourceId": "pp48" },
-              { "line": 191, "column": 8, "sourceId": "o48-751-05248d-226b67" }
+              {
+                "column": 34960,
+                "line": 984,
+                "sourceId": "48"
+              },
+              {
+                "line": 61283,
+                "column": 10,
+                "sourceId": "pp48"
+              },
+              {
+                "line": 191,
+                "column": 8,
+                "sourceId": "o48-751-05248d-226b67"
+              }
             ],
             "key": "return;\n      }\n    }\n\n    this.isTokenRequested = true;\n    const deferredState = this.deferredStat",
             "point": "3894222644395571861235537071309015",
@@ -3673,12 +3968,27 @@
               "functionOutline": {
                 "name": "update",
                 "location": {
-                  "begin": { "line": 175, "column": 2 },
-                  "end": { "line": 229, "column": 3 }
+                  "begin": {
+                    "line": 175,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 229,
+                    "column": 3
+                  }
                 },
-                "parameters": ["refresh"],
-                "body": { "line": 175, "column": 41 },
-                "className": "TokenManager"
+                "parameters": [
+                  "refresh"
+                ],
+                "body": {
+                  "line": 175,
+                  "column": 41
+                },
+                "className": "TokenManager",
+                "breakpointLocation": {
+                  "line": 176,
+                  "column": 4
+                }
               }
             }
           },
@@ -3690,9 +4000,21 @@
           "sequenceId": "ExecutedStatement:2",
           "event": {
             "location": [
-              { "column": 12855, "line": 1, "sourceId": "49" },
-              { "line": 753, "column": 28, "sourceId": "pp49" },
-              { "line": 77, "column": 24, "sourceId": "o49-12-6caf0c-4834a7" }
+              {
+                "column": 12855,
+                "line": 1,
+                "sourceId": "49"
+              },
+              {
+                "line": 753,
+                "column": 28,
+                "sourceId": "pp49"
+              },
+              {
+                "line": 77,
+                "column": 24,
+                "sourceId": "o49-12-6caf0c-4834a7"
+              }
             ],
             "key": "format(new Date(date));\n  }\n\n  return content;\n}\n\nfunction ReplayTitle({ title }: { title?: string |",
             "point": "9735556610903849810656202164535892",
@@ -4116,12 +4438,28 @@
               "functionOutline": {
                 "name": "getRelativeDate",
                 "location": {
-                  "begin": { "line": 48, "column": 7 },
-                  "end": { "line": 81, "column": 1 }
+                  "begin": {
+                    "line": 48,
+                    "column": 7
+                  },
+                  "end": {
+                    "line": 81,
+                    "column": 1
+                  }
                 },
-                "body": { "line": 48, "column": 91 },
-                "parameters": ["date", "truncate = false", "addSuffix = true"],
-                "breakpointLocation": { "line": 49, "column": 16 }
+                "parameters": [
+                  "date",
+                  "truncate = false",
+                  "addSuffix = true"
+                ],
+                "body": {
+                  "line": 48,
+                  "column": 91
+                },
+                "breakpointLocation": {
+                  "line": 49,
+                  "column": 16
+                }
               }
             }
           },
@@ -4185,9 +4523,21 @@
           "sequenceId": "ExecutedStatement:3",
           "event": {
             "location": [
-              { "column": 56304, "line": 947, "sourceId": "47" },
-              { "line": 53985, "column": 10, "sourceId": "pp47" },
-              { "line": 27, "column": 6, "sourceId": "o47-690-a68736-181a75" }
+              {
+                "column": 56304,
+                "line": 947,
+                "sourceId": "47"
+              },
+              {
+                "line": 53985,
+                "column": 10,
+                "sourceId": "pp47"
+              },
+              {
+                "line": 27,
+                "column": 6,
+                "sourceId": "o47-690-a68736-181a75"
+              }
             ],
             "key": "skipTelemetry()\n    ) {\n      return;\n    }\n\n    if (setup) {\n      return;\n    }\n\n    setup = true;",
             "point": "7463926734580127483137443825188974",
@@ -4695,12 +5045,26 @@
               "functionOutline": {
                 "name": "createSession",
                 "location": {
-                  "begin": { "line": 13, "column": 17 },
-                  "end": { "line": 53, "column": 3 }
+                  "begin": {
+                    "line": 13,
+                    "column": 17
+                  },
+                  "end": {
+                    "line": 53,
+                    "column": 3
+                  }
                 },
-                "body": { "line": 21, "column": 8 },
-                "parameters": ["{}"],
-                "breakpointLocation": { "line": 24, "column": 6 }
+                "parameters": [
+                  "{}"
+                ],
+                "body": {
+                  "line": 21,
+                  "column": 8
+                },
+                "breakpointLocation": {
+                  "line": 24,
+                  "column": 6
+                }
               }
             }
           },
@@ -4712,9 +5076,21 @@
           "sequenceId": "ExecutedStatement:4",
           "event": {
             "location": [
-              { "column": 93576, "line": 109, "sourceId": "48" },
-              { "line": 21294, "column": 13, "sourceId": "pp48" },
-              { "line": 40, "column": 14, "sourceId": "o48-306-6987ba-ac92b3" }
+              {
+                "column": 93576,
+                "line": 109,
+                "sourceId": "48"
+              },
+              {
+                "line": 21294,
+                "column": 13,
+                "sourceId": "pp48"
+              },
+              {
+                "line": 40,
+                "column": 14,
+                "sourceId": "o48-306-6987ba-ac92b3"
+              }
             ],
             "key": "add(callback);\n\n  callback(mutableState);\n\n  return () => {\n    subscribers.delete(callback);\n  };\n}",
             "point": "11033630825192936950841296059105318",
@@ -4838,12 +5214,26 @@
               "functionOutline": {
                 "name": "subscribe",
                 "location": {
-                  "begin": { "line": 39, "column": 7 },
-                  "end": { "line": 47, "column": 1 }
+                  "begin": {
+                    "line": 39,
+                    "column": 7
+                  },
+                  "end": {
+                    "line": 47,
+                    "column": 1
+                  }
                 },
-                "body": { "line": 39, "column": 59 },
-                "parameters": ["callback"],
-                "breakpointLocation": { "line": 40, "column": 14 }
+                "parameters": [
+                  "callback"
+                ],
+                "body": {
+                  "line": 39,
+                  "column": 59
+                },
+                "breakpointLocation": {
+                  "line": 40,
+                  "column": 14
+                }
               }
             }
           },
@@ -4855,9 +5245,21 @@
           "sequenceId": "ExecutedStatement:5",
           "event": {
             "location": [
-              { "column": 6744, "line": 38, "sourceId": "48" },
-              { "line": 4294, "column": 14, "sourceId": "pp48" },
-              { "line": 96, "column": 10, "sourceId": "o48-65-9e4e5e-ac92b3" }
+              {
+                "column": 6744,
+                "line": 38,
+                "sourceId": "48"
+              },
+              {
+                "line": 4294,
+                "column": 14,
+                "sourceId": "pp48"
+              },
+              {
+                "line": 96,
+                "column": 10,
+                "sourceId": "o48-65-9e4e5e-ac92b3"
+              }
             ],
             "key": "points.forEach(point => {\n            const { key } = point;\n            const { column, line, sourc",
             "point": "11682667932732808081496373062534349",
@@ -6553,17 +6955,29 @@
               "functionOutline": {
                 "name": "useBreakpointIdsFromServer",
                 "location": {
-                  "begin": { "line": 15, "column": 15 },
-                  "end": { "line": 154, "column": 1 }
+                  "begin": {
+                    "line": 15,
+                    "column": 15
+                  },
+                  "end": {
+                    "line": 154,
+                    "column": 1
+                  }
                 },
-                "body": { "line": 20, "column": 8 },
                 "parameters": [
                   "replayClient",
                   "points",
                   "pointBehaviors",
                   "deletePoints"
                 ],
-                "breakpointLocation": { "line": 21, "column": 17 }
+                "body": {
+                  "line": 20,
+                  "column": 8
+                },
+                "breakpointLocation": {
+                  "line": 21,
+                  "column": 17
+                }
               }
             }
           },
@@ -6575,9 +6989,21 @@
           "sequenceId": "ExecutedStatement:5",
           "event": {
             "location": [
-              { "column": 6746, "line": 38, "sourceId": "48" },
-              { "line": 4294, "column": 16, "sourceId": "pp48" },
-              { "line": 96, "column": 17, "sourceId": "o48-65-9e4e5e-ac92b3" }
+              {
+                "column": 6746,
+                "line": 38,
+                "sourceId": "48"
+              },
+              {
+                "line": 4294,
+                "column": 16,
+                "sourceId": "pp48"
+              },
+              {
+                "line": 96,
+                "column": 17,
+                "sourceId": "o48-65-9e4e5e-ac92b3"
+              }
             ],
             "key": "forEach(point => {\n            const { key } = point;\n            const { column, line, sourceId } =",
             "point": "11682667932732808081496373062534369",
@@ -8273,17 +8699,29 @@
               "functionOutline": {
                 "name": "useBreakpointIdsFromServer",
                 "location": {
-                  "begin": { "line": 15, "column": 15 },
-                  "end": { "line": 154, "column": 1 }
+                  "begin": {
+                    "line": 15,
+                    "column": 15
+                  },
+                  "end": {
+                    "line": 154,
+                    "column": 1
+                  }
                 },
-                "body": { "line": 20, "column": 8 },
                 "parameters": [
                   "replayClient",
                   "points",
                   "pointBehaviors",
                   "deletePoints"
                 ],
-                "breakpointLocation": { "line": 21, "column": 17 }
+                "body": {
+                  "line": 20,
+                  "column": 8
+                },
+                "breakpointLocation": {
+                  "line": 21,
+                  "column": 17
+                }
               }
             }
           },
@@ -8295,9 +8733,21 @@
           "sequenceId": "ExecutedStatement:5",
           "event": {
             "location": [
-              { "column": 7195, "line": 38, "sourceId": "48" },
-              { "line": 4317, "column": 20, "sourceId": "pp48" },
-              { "line": 134, "column": 21, "sourceId": "o48-65-9e4e5e-ac92b3" }
+              {
+                "column": 7195,
+                "line": 38,
+                "sourceId": "48"
+              },
+              {
+                "line": 4317,
+                "column": 20,
+                "sourceId": "pp48"
+              },
+              {
+                "line": 134,
+                "column": 21,
+                "sourceId": "o48-65-9e4e5e-ac92b3"
+              }
             ],
             "key": "forEach(prevPoint => {\n            const point = points.find(({ key }) => key === prevPoint.key);\n  ",
             "point": "11682667932732808081496373062534381",
@@ -9993,17 +10443,29 @@
               "functionOutline": {
                 "name": "useBreakpointIdsFromServer",
                 "location": {
-                  "begin": { "line": 15, "column": 15 },
-                  "end": { "line": 154, "column": 1 }
+                  "begin": {
+                    "line": 15,
+                    "column": 15
+                  },
+                  "end": {
+                    "line": 154,
+                    "column": 1
+                  }
                 },
-                "body": { "line": 20, "column": 8 },
                 "parameters": [
                   "replayClient",
                   "points",
                   "pointBehaviors",
                   "deletePoints"
                 ],
-                "breakpointLocation": { "line": 21, "column": 17 }
+                "body": {
+                  "line": 20,
+                  "column": 8
+                },
+                "breakpointLocation": {
+                  "line": 21,
+                  "column": 17
+                }
               }
             }
           },
@@ -10015,9 +10477,21 @@
           "sequenceId": "ExecutedStatement:6",
           "event": {
             "location": [
-              { "column": 492129, "line": 16, "sourceId": "47" },
-              { "line": 27366, "column": 16, "sourceId": "pp47" },
-              { "line": 717, "column": 16, "sourceId": "o47-466-31e96d-181a75" }
+              {
+                "column": 492129,
+                "line": 16,
+                "sourceId": "47"
+              },
+              {
+                "line": 27366,
+                "column": 16,
+                "sourceId": "pp47"
+              },
+              {
+                "line": 717,
+                "column": 16,
+                "sourceId": "o47-466-31e96d-181a75"
+              }
             ],
             "key": "return accumulated;\n              }\n\n              assert(attempt != null, \"Annotation is missing `a",
             "point": "11682667932771415963924784679485510",
@@ -11677,17 +12151,29 @@
               "functionOutline": {
                 "name": "processGroupedTestCases",
                 "location": {
-                  "begin": { "line": 652, "column": 7 },
-                  "end": { "line": 788, "column": 1 }
+                  "begin": {
+                    "line": 652,
+                    "column": 7
+                  },
+                  "end": {
+                    "line": 788,
+                    "column": 1
+                  }
                 },
-                "body": { "line": 659, "column": 53 },
                 "parameters": [
                   "replayClient",
                   "groupedTestCases",
                   "testSources",
                   "testStacks"
                 ],
-                "breakpointLocation": { "line": 660, "column": 2 }
+                "body": {
+                  "line": 659,
+                  "column": 53
+                },
+                "breakpointLocation": {
+                  "line": 660,
+                  "column": 2
+                }
               }
             }
           },
@@ -11699,9 +12185,21 @@
           "sequenceId": "ExecutedStatement:7",
           "event": {
             "location": [
-              { "column": 105019, "line": 44, "sourceId": "54" },
-              { "line": 11144, "column": 8, "sourceId": "pp54" },
-              { "line": 66, "column": 6, "sourceId": "o54-191-d84580-3acfbe" }
+              {
+                "column": 105019,
+                "line": 44,
+                "sourceId": "54"
+              },
+              {
+                "line": 11144,
+                "column": 8,
+                "sourceId": "pp54"
+              },
+              {
+                "line": 66,
+                "column": 6,
+                "sourceId": "o54-191-d84580-3acfbe"
+              }
             ],
             "key": "return [];\n    }\n\n    const { testRunnerName } = testRecording;\n\n    // This should be the same orde",
             "point": "15252372023274744005549933773979750",
@@ -12509,10 +13007,15 @@
               "functionOutline": {
                 "name": "load",
                 "location": {
-                  "begin": { "line": 64, "column": 2 },
-                  "end": { "line": 129, "column": 3 }
+                  "begin": {
+                    "line": 64,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 129,
+                    "column": 3
+                  }
                 },
-                "body": { "line": 64, "column": 72 },
                 "parameters": [
                   "begin",
                   "end",
@@ -12521,7 +13024,14 @@
                   "enabled",
                   "options"
                 ],
-                "breakpointLocation": { "line": 65, "column": 4 }
+                "body": {
+                  "line": 64,
+                  "column": 72
+                },
+                "breakpointLocation": {
+                  "line": 65,
+                  "column": 4
+                }
               }
             }
           },
@@ -12886,9 +13396,21 @@
           "sequenceId": "ExecutedStatement:8",
           "event": {
             "location": [
-              { "column": 92222, "line": 109, "sourceId": "48" },
-              { "line": 21221, "column": 74, "sourceId": "pp48" },
-              { "line": 19, "column": 6, "sourceId": "o48-304-960b53-ac92b3" }
+              {
+                "column": 92222,
+                "line": 109,
+                "sourceId": "48"
+              },
+              {
+                "line": 21221,
+                "column": 74,
+                "sourceId": "pp48"
+              },
+              {
+                "line": 19,
+                "column": 6,
+                "sourceId": "o48-304-960b53-ac92b3"
+              }
             ],
             "key": "userActionEvent;\n  const { executionPoint: currentPoint } = useContext(TimelineContext);\n\n  const di",
             "point": "20769187435695528572726020849795116",
@@ -13372,11 +13894,26 @@
               "functionOutline": {
                 "name": "useShowUserActionEventBoundary",
                 "location": {
-                  "begin": { "line": 8, "column": 7 },
-                  "end": { "line": 46, "column": 1 }
+                  "begin": {
+                    "line": 8,
+                    "column": 7
+                  },
+                  "end": {
+                    "line": 46,
+                    "column": 1
+                  }
                 },
-                "parameters": ["{}"],
-                "body": { "line": 14, "column": 3 }
+                "parameters": [
+                  "{}"
+                ],
+                "body": {
+                  "line": 14,
+                  "column": 3
+                },
+                "breakpointLocation": {
+                  "line": 19,
+                  "column": 6
+                }
               }
             }
           },
@@ -13388,9 +13925,21 @@
           "sequenceId": "ExecutedStatement:8",
           "event": {
             "location": [
-              { "column": 92243, "line": 109, "sourceId": "48" },
-              { "line": 21222, "column": 30, "sourceId": "pp48" },
-              { "line": 20, "column": 43, "sourceId": "o48-304-960b53-ac92b3" }
+              {
+                "column": 92243,
+                "line": 109,
+                "sourceId": "48"
+              },
+              {
+                "line": 21222,
+                "column": 30,
+                "sourceId": "pp48"
+              },
+              {
+                "line": 20,
+                "column": 43,
+                "sourceId": "o48-304-960b53-ac92b3"
+              }
             ],
             "key": "useContext(TimelineContext);\n\n  const dispatch = useAppDispatch();\n\n  if (afterStep == null || befor",
             "point": "20769187435695528572726020849795144",
@@ -13874,11 +14423,26 @@
               "functionOutline": {
                 "name": "useShowUserActionEventBoundary",
                 "location": {
-                  "begin": { "line": 8, "column": 7 },
-                  "end": { "line": 46, "column": 1 }
+                  "begin": {
+                    "line": 8,
+                    "column": 7
+                  },
+                  "end": {
+                    "line": 46,
+                    "column": 1
+                  }
                 },
-                "parameters": ["{}"],
-                "body": { "line": 14, "column": 3 }
+                "parameters": [
+                  "{}"
+                ],
+                "body": {
+                  "line": 14,
+                  "column": 3
+                },
+                "breakpointLocation": {
+                  "line": 19,
+                  "column": 6
+                }
               }
             }
           },
@@ -13890,9 +14454,21 @@
           "sequenceId": "ExecutedStatement:8",
           "event": {
             "location": [
-              { "column": 92267, "line": 109, "sourceId": "48" },
-              { "line": 21223, "column": 10, "sourceId": "pp48" },
-              { "line": 22, "column": 19, "sourceId": "o48-304-960b53-ac92b3" }
+              {
+                "column": 92267,
+                "line": 109,
+                "sourceId": "48"
+              },
+              {
+                "line": 21223,
+                "column": 10,
+                "sourceId": "pp48"
+              },
+              {
+                "line": 22,
+                "column": 19,
+                "sourceId": "o48-304-960b53-ac92b3"
+              }
             ],
             "key": "useAppDispatch();\n\n  if (afterStep == null || beforeStep == null) {\n    return {\n      disabled: tru",
             "point": "20769187435695533184412039277183097",
@@ -14376,11 +14952,26 @@
               "functionOutline": {
                 "name": "useShowUserActionEventBoundary",
                 "location": {
-                  "begin": { "line": 8, "column": 7 },
-                  "end": { "line": 46, "column": 1 }
+                  "begin": {
+                    "line": 8,
+                    "column": 7
+                  },
+                  "end": {
+                    "line": 46,
+                    "column": 1
+                  }
                 },
-                "parameters": ["{}"],
-                "body": { "line": 14, "column": 3 }
+                "parameters": [
+                  "{}"
+                ],
+                "body": {
+                  "line": 14,
+                  "column": 3
+                },
+                "breakpointLocation": {
+                  "line": 19,
+                  "column": 6
+                }
               }
             }
           },
@@ -14392,9 +14983,21 @@
           "sequenceId": "ExecutedStatement:8",
           "event": {
             "location": [
-              { "column": 92278, "line": 109, "sourceId": "48" },
-              { "line": 21224, "column": 4, "sourceId": "pp48" },
-              { "line": 24, "column": 2, "sourceId": "o48-304-960b53-ac92b3" }
+              {
+                "column": 92278,
+                "line": 109,
+                "sourceId": "48"
+              },
+              {
+                "line": 21224,
+                "column": 4,
+                "sourceId": "pp48"
+              },
+              {
+                "line": 24,
+                "column": 2,
+                "sourceId": "o48-304-960b53-ac92b3"
+              }
             ],
             "key": "if (afterStep == null || beforeStep == null) {\n    return {\n      disabled: true,\n      onClick: () ",
             "point": "20769187435695541254862571525111962",
@@ -14878,11 +15481,26 @@
               "functionOutline": {
                 "name": "useShowUserActionEventBoundary",
                 "location": {
-                  "begin": { "line": 8, "column": 7 },
-                  "end": { "line": 46, "column": 1 }
+                  "begin": {
+                    "line": 8,
+                    "column": 7
+                  },
+                  "end": {
+                    "line": 46,
+                    "column": 1
+                  }
                 },
-                "parameters": ["{}"],
-                "body": { "line": 14, "column": 3 }
+                "parameters": [
+                  "{}"
+                ],
+                "body": {
+                  "line": 14,
+                  "column": 3
+                },
+                "breakpointLocation": {
+                  "line": 19,
+                  "column": 6
+                }
               }
             }
           },
@@ -14894,9 +15512,21 @@
           "sequenceId": "ExecutedStatement:8",
           "event": {
             "location": [
-              { "column": 92339, "line": 109, "sourceId": "48" },
-              { "line": 21227, "column": 12, "sourceId": "pp48" },
-              { "line": 31, "column": 27, "sourceId": "o48-304-960b53-ac92b3" }
+              {
+                "column": 92339,
+                "line": 109,
+                "sourceId": "48"
+              },
+              {
+                "line": 21227,
+                "column": 12,
+                "sourceId": "pp48"
+              },
+              {
+                "line": 31,
+                "column": 27,
+                "sourceId": "o48-304-960b53-ac92b3"
+              }
             ],
             "key": "boundary === \"before\" ? beforeStep : afterStep;\n\n  const disabled = timeStampedPoint.point === curre",
             "point": "20769187435695541254862571525112012",
@@ -15380,11 +16010,26 @@
               "functionOutline": {
                 "name": "useShowUserActionEventBoundary",
                 "location": {
-                  "begin": { "line": 8, "column": 7 },
-                  "end": { "line": 46, "column": 1 }
+                  "begin": {
+                    "line": 8,
+                    "column": 7
+                  },
+                  "end": {
+                    "line": 46,
+                    "column": 1
+                  }
                 },
-                "parameters": ["{}"],
-                "body": { "line": 14, "column": 3 }
+                "parameters": [
+                  "{}"
+                ],
+                "body": {
+                  "line": 14,
+                  "column": 3
+                },
+                "breakpointLocation": {
+                  "line": 19,
+                  "column": 6
+                }
               }
             }
           },
@@ -15396,9 +16041,21 @@
           "sequenceId": "ExecutedStatement:8",
           "event": {
             "location": [
-              { "column": 92358, "line": 109, "sourceId": "48" },
-              { "line": 21228, "column": 10, "sourceId": "pp48" },
-              { "line": 33, "column": 19, "sourceId": "o48-304-960b53-ac92b3" }
+              {
+                "column": 92358,
+                "line": 109,
+                "sourceId": "48"
+              },
+              {
+                "line": 21228,
+                "column": 10,
+                "sourceId": "pp48"
+              },
+              {
+                "line": 33,
+                "column": 19,
+                "sourceId": "o48-304-960b53-ac92b3"
+              }
             ],
             "key": "timeStampedPoint.point === currentPoint;\n\n  const onClick = () => {\n    dispatch(\n      seek({\n     ",
             "point": "20769187435695541254862571525112040",
@@ -15882,11 +16539,26 @@
               "functionOutline": {
                 "name": "useShowUserActionEventBoundary",
                 "location": {
-                  "begin": { "line": 8, "column": 7 },
-                  "end": { "line": 46, "column": 1 }
+                  "begin": {
+                    "line": 8,
+                    "column": 7
+                  },
+                  "end": {
+                    "line": 46,
+                    "column": 1
+                  }
                 },
-                "parameters": ["{}"],
-                "body": { "line": 14, "column": 3 }
+                "parameters": [
+                  "{}"
+                ],
+                "body": {
+                  "line": 14,
+                  "column": 3
+                },
+                "breakpointLocation": {
+                  "line": 19,
+                  "column": 6
+                }
               }
             }
           },
@@ -15898,9 +16570,21 @@
           "sequenceId": "ExecutedStatement:8",
           "event": {
             "location": [
-              { "column": 92372, "line": 109, "sourceId": "48" },
-              { "line": 21229, "column": 10, "sourceId": "pp48" },
-              { "line": 35, "column": 18, "sourceId": "o48-304-960b53-ac92b3" }
+              {
+                "column": 92372,
+                "line": 109,
+                "sourceId": "48"
+              },
+              {
+                "line": 21229,
+                "column": 10,
+                "sourceId": "pp48"
+              },
+              {
+                "line": 35,
+                "column": 18,
+                "sourceId": "o48-304-960b53-ac92b3"
+              }
             ],
             "key": "() => {\n    dispatch(\n      seek({\n        executionPoint: timeStampedPoint.point,\n        openSourc",
             "point": "20769187435695541254862571525112061",
@@ -16384,11 +17068,26 @@
               "functionOutline": {
                 "name": "useShowUserActionEventBoundary",
                 "location": {
-                  "begin": { "line": 8, "column": 7 },
-                  "end": { "line": 46, "column": 1 }
+                  "begin": {
+                    "line": 8,
+                    "column": 7
+                  },
+                  "end": {
+                    "line": 46,
+                    "column": 1
+                  }
                 },
-                "parameters": ["{}"],
-                "body": { "line": 14, "column": 3 }
+                "parameters": [
+                  "{}"
+                ],
+                "body": {
+                  "line": 14,
+                  "column": 3
+                },
+                "breakpointLocation": {
+                  "line": 19,
+                  "column": 6
+                }
               }
             }
           },
@@ -16400,9 +17099,21 @@
           "sequenceId": "ExecutedStatement:9",
           "event": {
             "location": [
-              { "column": 10522, "line": 67, "sourceId": "48" },
-              { "line": 11945, "column": 38, "sourceId": "pp48" },
-              { "line": 153, "column": 26, "sourceId": "o48-202-922ac5-ac92b3" }
+              {
+                "column": 10522,
+                "line": 67,
+                "sourceId": "48"
+              },
+              {
+                "line": 11945,
+                "column": 38,
+                "sourceId": "pp48"
+              },
+              {
+                "line": 153,
+                "column": 26,
+                "sourceId": "o48-202-922ac5-ac92b3"
+              }
             ],
             "key": "setIsHovered(false)}\n    >\n      <div className={styles.Text}>\n        {eventNumber != null ? <div c",
             "point": "22716298757959855367982102691708937",
@@ -18146,11 +18857,26 @@
               "functionOutline": {
                 "name": "UserActionEventRow",
                 "location": {
-                  "begin": { "line": 44, "column": 20 },
-                  "end": { "line": 187, "column": 1 }
+                  "begin": {
+                    "line": 44,
+                    "column": 20
+                  },
+                  "end": {
+                    "line": 187,
+                    "column": 1
+                  }
                 },
-                "parameters": ["{}"],
-                "body": { "line": 54, "column": 3 }
+                "parameters": [
+                  "{}"
+                ],
+                "body": {
+                  "line": 54,
+                  "column": 3
+                },
+                "breakpointLocation": {
+                  "line": 55,
+                  "column": 19
+                }
               }
             }
           },
@@ -18162,9 +18888,21 @@
           "sequenceId": "ExecutedStatement:10",
           "event": {
             "location": [
-              { "column": 13264, "line": 67, "sourceId": "48" },
-              { "line": 12139, "column": 62, "sourceId": "pp48" },
-              { "line": 182, "column": 15, "sourceId": "o48-203-6a889a-ac92b3" }
+              {
+                "column": 13264,
+                "line": 67,
+                "sourceId": "48"
+              },
+              {
+                "line": 12139,
+                "column": 62,
+                "sourceId": "pp48"
+              },
+              {
+                "line": 182,
+                "column": 15,
+                "sourceId": "o48-203-6a889a-ac92b3"
+              }
             ],
             "key": "unhighlightNode());\n    }\n  };\n\n  return (\n    <div\n      className={styles.Row}\n      data-context-",
             "point": "22716298757962185422342913129447524",
@@ -20352,11 +21090,26 @@
               "functionOutline": {
                 "name": "TestSectionRow",
                 "location": {
-                  "begin": { "line": 34, "column": 7 },
-                  "end": { "line": 214, "column": 1 }
+                  "begin": {
+                    "line": 34,
+                    "column": 7
+                  },
+                  "end": {
+                    "line": 214,
+                    "column": 1
+                  }
                 },
-                "parameters": ["{}"],
-                "body": { "line": 42, "column": 3 }
+                "parameters": [
+                  "{}"
+                ],
+                "body": {
+                  "line": 42,
+                  "column": 3
+                },
+                "breakpointLocation": {
+                  "line": 43,
+                  "column": 33
+                }
               }
             }
           },
@@ -20368,9 +21121,21 @@
           "sequenceId": "ExecutedStatement:10",
           "event": {
             "location": [
-              { "column": 287431, "line": 28, "sourceId": "47" },
-              { "line": 44569, "column": 4, "sourceId": "pp47" },
-              { "line": 105, "column": 2, "sourceId": "o47-566-da7c1f-181a75" }
+              {
+                "column": 287431,
+                "line": 28,
+                "sourceId": "47"
+              },
+              {
+                "line": 44569,
+                "column": 4,
+                "sourceId": "pp47"
+              },
+              {
+                "line": 105,
+                "column": 2,
+                "sourceId": "o47-566-da7c1f-181a75"
+              }
             ],
             "key": "return async (dispatch, getState) => {\n    const { highlightedNodes } = getState().markup;\n    if (h",
             "point": "22716298757962187728185887983403017",
@@ -20482,12 +21247,24 @@
               "functionOutline": {
                 "name": "unhighlightNode",
                 "location": {
-                  "begin": { "line": 104, "column": 7 },
-                  "end": { "line": 111, "column": 1 }
+                  "begin": {
+                    "line": 104,
+                    "column": 7
+                  },
+                  "end": {
+                    "line": 111,
+                    "column": 1
+                  }
                 },
-                "body": { "line": 104, "column": 49 },
                 "parameters": [],
-                "breakpointLocation": { "line": 105, "column": 2 }
+                "body": {
+                  "line": 104,
+                  "column": 49
+                },
+                "breakpointLocation": {
+                  "line": 105,
+                  "column": 2
+                }
               }
             }
           },
@@ -20499,9 +21276,21 @@
           "sequenceId": "ExecutedStatement:10",
           "event": {
             "location": [
-              { "column": 13257, "line": 67, "sourceId": "48" },
-              { "line": 12139, "column": 54, "sourceId": "pp48" },
-              { "line": 182, "column": 6, "sourceId": "o48-203-6a889a-ac92b3" }
+              {
+                "column": 13257,
+                "line": 67,
+                "sourceId": "48"
+              },
+              {
+                "line": 12139,
+                "column": 54,
+                "sourceId": "pp48"
+              },
+              {
+                "line": 182,
+                "column": 6,
+                "sourceId": "o48-203-6a889a-ac92b3"
+              }
             ],
             "key": "dispatch(unhighlightNode());\n    }\n  };\n\n  return (\n    <div\n      className={styles.Row}\n      data",
             "point": "22716298757962187728185922343141502",
@@ -22689,11 +23478,26 @@
               "functionOutline": {
                 "name": "TestSectionRow",
                 "location": {
-                  "begin": { "line": 34, "column": 7 },
-                  "end": { "line": 214, "column": 1 }
+                  "begin": {
+                    "line": 34,
+                    "column": 7
+                  },
+                  "end": {
+                    "line": 214,
+                    "column": 1
+                  }
                 },
-                "parameters": ["{}"],
-                "body": { "line": 42, "column": 3 }
+                "parameters": [
+                  "{}"
+                ],
+                "body": {
+                  "line": 42,
+                  "column": 3
+                },
+                "breakpointLocation": {
+                  "line": 43,
+                  "column": 33
+                }
               }
             }
           },
@@ -22705,9 +23509,21 @@
           "sequenceId": "ExecutedStatement:11",
           "event": {
             "location": [
-              { "column": 287475, "line": 28, "sourceId": "47" },
-              { "line": 44570, "column": 35, "sourceId": "pp47" },
-              { "line": 106, "column": 33, "sourceId": "o47-566-da7c1f-181a75" }
+              {
+                "column": 287475,
+                "line": 28,
+                "sourceId": "47"
+              },
+              {
+                "line": 44570,
+                "column": 35,
+                "sourceId": "pp47"
+              },
+              {
+                "line": 106,
+                "column": 33,
+                "sourceId": "o47-566-da7c1f-181a75"
+              }
             ],
             "key": "getState().markup;\n    if (highlightedNodes && highlightedNodes.length > 0) {\n      dispatch(nodeHig",
             "point": "22716298757962195798636351511855147",
@@ -22819,12 +23635,24 @@
               "functionOutline": {
                 "name": "unhighlightNode",
                 "location": {
-                  "begin": { "line": 104, "column": 7 },
-                  "end": { "line": 111, "column": 1 }
+                  "begin": {
+                    "line": 104,
+                    "column": 7
+                  },
+                  "end": {
+                    "line": 111,
+                    "column": 1
+                  }
                 },
-                "body": { "line": 104, "column": 49 },
                 "parameters": [],
-                "breakpointLocation": { "line": 105, "column": 2 }
+                "body": {
+                  "line": 104,
+                  "column": 49
+                },
+                "breakpointLocation": {
+                  "line": 105,
+                  "column": 2
+                }
               }
             }
           },
@@ -22836,9 +23664,21 @@
           "sequenceId": "ExecutedStatement:11",
           "event": {
             "location": [
-              { "column": 287486, "line": 28, "sourceId": "47" },
-              { "line": 44571, "column": 6, "sourceId": "pp47" },
-              { "line": 107, "column": 8, "sourceId": "o47-566-da7c1f-181a75" }
+              {
+                "column": 287486,
+                "line": 28,
+                "sourceId": "47"
+              },
+              {
+                "line": 44571,
+                "column": 6,
+                "sourceId": "pp47"
+              },
+              {
+                "line": 107,
+                "column": 8,
+                "sourceId": "o47-566-da7c1f-181a75"
+              }
             ],
             "key": "highlightedNodes && highlightedNodes.length > 0) {\n      dispatch(nodeHighlightingCleared());\n    }\n",
             "point": "22716298757962196951557856118702147",
@@ -22950,12 +23790,24 @@
               "functionOutline": {
                 "name": "unhighlightNode",
                 "location": {
-                  "begin": { "line": 104, "column": 7 },
-                  "end": { "line": 111, "column": 1 }
+                  "begin": {
+                    "line": 104,
+                    "column": 7
+                  },
+                  "end": {
+                    "line": 111,
+                    "column": 1
+                  }
                 },
-                "body": { "line": 104, "column": 49 },
                 "parameters": [],
-                "breakpointLocation": { "line": 105, "column": 2 }
+                "body": {
+                  "line": 104,
+                  "column": 49
+                },
+                "breakpointLocation": {
+                  "line": 105,
+                  "column": 2
+                }
               }
             }
           },
@@ -22967,9 +23819,21 @@
           "sequenceId": "ExecutedStatement:12",
           "event": {
             "location": [
-              { "column": 92377, "line": 109, "sourceId": "48" },
-              { "line": 21230, "column": 8, "sourceId": "pp48" },
-              { "line": 36, "column": 4, "sourceId": "o48-304-960b53-ac92b3" }
+              {
+                "column": 92377,
+                "line": 109,
+                "sourceId": "48"
+              },
+              {
+                "line": 21230,
+                "column": 8,
+                "sourceId": "pp48"
+              },
+              {
+                "line": 36,
+                "column": 4,
+                "sourceId": "o48-304-960b53-ac92b3"
+              }
             ],
             "key": "dispatch(\n      seek({\n        executionPoint: timeStampedPoint.point,\n        openSource: false,\n  ",
             "point": "22716298757983079818770903017193481",
@@ -23453,11 +24317,26 @@
               "functionOutline": {
                 "name": "useShowUserActionEventBoundary",
                 "location": {
-                  "begin": { "line": 8, "column": 7 },
-                  "end": { "line": 46, "column": 1 }
+                  "begin": {
+                    "line": 8,
+                    "column": 7
+                  },
+                  "end": {
+                    "line": 46,
+                    "column": 1
+                  }
                 },
-                "parameters": ["{}"],
-                "body": { "line": 14, "column": 3 }
+                "parameters": [
+                  "{}"
+                ],
+                "body": {
+                  "line": 14,
+                  "column": 3
+                },
+                "breakpointLocation": {
+                  "line": 19,
+                  "column": 6
+                }
               }
             }
           },
@@ -23469,9 +24348,21 @@
           "sequenceId": "ExecutedStatement:12",
           "event": {
             "location": [
-              { "column": 92384, "line": 109, "sourceId": "48" },
-              { "line": 21230, "column": 16, "sourceId": "pp48" },
-              { "line": 37, "column": 6, "sourceId": "o48-304-960b53-ac92b3" }
+              {
+                "column": 92384,
+                "line": 109,
+                "sourceId": "48"
+              },
+              {
+                "line": 21230,
+                "column": 16,
+                "sourceId": "pp48"
+              },
+              {
+                "line": 37,
+                "column": 6,
+                "sourceId": "o48-304-960b53-ac92b3"
+              }
             ],
             "key": "seek({\n        executionPoint: timeStampedPoint.point,\n        openSource: false,\n        time: time",
             "point": "22716298757983079818770903017193491",
@@ -23955,11 +24846,26 @@
               "functionOutline": {
                 "name": "useShowUserActionEventBoundary",
                 "location": {
-                  "begin": { "line": 8, "column": 7 },
-                  "end": { "line": 46, "column": 1 }
+                  "begin": {
+                    "line": 8,
+                    "column": 7
+                  },
+                  "end": {
+                    "line": 46,
+                    "column": 1
+                  }
                 },
-                "parameters": ["{}"],
-                "body": { "line": 14, "column": 3 }
+                "parameters": [
+                  "{}"
+                ],
+                "body": {
+                  "line": 14,
+                  "column": 3
+                },
+                "breakpointLocation": {
+                  "line": 19,
+                  "column": 6
+                }
               }
             }
           },
@@ -23971,9 +24877,21 @@
           "sequenceId": "ExecutedStatement:13",
           "event": {
             "location": [
-              { "column": 12541, "line": 43, "sourceId": "47" },
-              { "line": 46323, "column": 12, "sourceId": "pp47" },
-              { "line": 290, "column": 10, "sourceId": "o47-588-810c73-181a75" }
+              {
+                "column": 12541,
+                "line": 43,
+                "sourceId": "47"
+              },
+              {
+                "line": 46323,
+                "column": 12,
+                "sourceId": "pp47"
+              },
+              {
+                "line": 290,
+                "column": 10,
+                "sourceId": "o47-588-810c73-181a75"
+              }
             ],
             "key": "return;\n        }\n\n        if (\n          nearestEvent &&\n          Math.abs(nearestEvent.time - cla",
             "point": "23040817311707031686347262535926482",
@@ -25333,12 +26251,26 @@
               "functionOutline": {
                 "name": "seek",
                 "location": {
-                  "begin": { "line": 249, "column": 7 },
-                  "end": { "line": 360, "column": 1 }
+                  "begin": {
+                    "line": 249,
+                    "column": 7
+                  },
+                  "end": {
+                    "line": 360,
+                    "column": 1
+                  }
                 },
-                "body": { "line": 263, "column": 33 },
-                "parameters": ["{}"],
-                "breakpointLocation": { "line": 264, "column": 2 }
+                "parameters": [
+                  "{}"
+                ],
+                "body": {
+                  "line": 263,
+                  "column": 33
+                },
+                "breakpointLocation": {
+                  "line": 264,
+                  "column": 2
+                }
               }
             }
           },
@@ -25350,9 +26282,21 @@
           "sequenceId": "ExecutedStatement:14",
           "event": {
             "location": [
-              { "column": 1700, "line": 43, "sourceId": "47" },
-              { "line": 45766, "column": 28, "sourceId": "pp47" },
-              { "line": 69, "column": 41, "sourceId": "o47-585-c2bc7b-181a75" }
+              {
+                "column": 1700,
+                "line": 43,
+                "sourceId": "47"
+              },
+              {
+                "line": 45766,
+                "column": 28,
+                "sourceId": "pp47"
+              },
+              {
+                "line": 69,
+                "column": 41,
+                "sourceId": "o47-585-c2bc7b-181a75"
+              }
             ],
             "key": "includes(LocalNag.YANK_TO_SOURCE)) {\n      dispatch(dismissLocalNag(LocalNag.YANK_TO_SOURCE));\n     ",
             "point": "24987928634145239797084727508205703",
@@ -25668,12 +26612,26 @@
               "functionOutline": {
                 "name": "setViewMode",
                 "location": {
-                  "begin": { "line": 63, "column": 7 },
-                  "end": { "line": 87, "column": 1 }
+                  "begin": {
+                    "line": 63,
+                    "column": 7
+                  },
+                  "end": {
+                    "line": 87,
+                    "column": 1
+                  }
                 },
-                "body": { "line": 63, "column": 63 },
-                "parameters": ["viewMode"],
-                "breakpointLocation": { "line": 64, "column": 2 }
+                "parameters": [
+                  "viewMode"
+                ],
+                "body": {
+                  "line": 63,
+                  "column": 63
+                },
+                "breakpointLocation": {
+                  "line": 64,
+                  "column": 2
+                }
               }
             }
           },
@@ -25685,9 +26643,21 @@
           "sequenceId": "ExecutedStatement:14",
           "event": {
             "location": [
-              { "column": 1731, "line": 43, "sourceId": "47" },
-              { "line": 45767, "column": 8, "sourceId": "pp47" },
-              { "line": 70, "column": 6, "sourceId": "o47-585-c2bc7b-181a75" }
+              {
+                "column": 1731,
+                "line": 43,
+                "sourceId": "47"
+              },
+              {
+                "line": 45767,
+                "column": 8,
+                "sourceId": "pp47"
+              },
+              {
+                "line": 70,
+                "column": 6,
+                "sourceId": "o47-585-c2bc7b-181a75"
+              }
             ],
             "key": "dispatch(dismissLocalNag(LocalNag.YANK_TO_SOURCE));\n      const currentPrimaryPanel = getSelectedPri",
             "point": "24987928634145239797084727508205726",
@@ -26003,12 +26973,26 @@
               "functionOutline": {
                 "name": "setViewMode",
                 "location": {
-                  "begin": { "line": 63, "column": 7 },
-                  "end": { "line": 87, "column": 1 }
+                  "begin": {
+                    "line": 63,
+                    "column": 7
+                  },
+                  "end": {
+                    "line": 87,
+                    "column": 1
+                  }
                 },
-                "body": { "line": 63, "column": 63 },
-                "parameters": ["viewMode"],
-                "breakpointLocation": { "line": 64, "column": 2 }
+                "parameters": [
+                  "viewMode"
+                ],
+                "body": {
+                  "line": 63,
+                  "column": 63
+                },
+                "breakpointLocation": {
+                  "line": 64,
+                  "column": 2
+                }
               }
             }
           },
@@ -26020,9 +27004,21 @@
           "sequenceId": "ExecutedStatement:14",
           "event": {
             "location": [
-              { "column": 1733, "line": 43, "sourceId": "47" },
-              { "line": 45767, "column": 10, "sourceId": "pp47" },
-              { "line": 70, "column": 15, "sourceId": "o47-585-c2bc7b-181a75" }
+              {
+                "column": 1733,
+                "line": 43,
+                "sourceId": "47"
+              },
+              {
+                "line": 45767,
+                "column": 10,
+                "sourceId": "pp47"
+              },
+              {
+                "line": 70,
+                "column": 15,
+                "sourceId": "o47-585-c2bc7b-181a75"
+              }
             ],
             "key": "dismissLocalNag(LocalNag.YANK_TO_SOURCE));\n      const currentPrimaryPanel = getSelectedPrimaryPanel",
             "point": "24987928634145240950006232115052732",
@@ -26338,12 +27334,26 @@
               "functionOutline": {
                 "name": "setViewMode",
                 "location": {
-                  "begin": { "line": 63, "column": 7 },
-                  "end": { "line": 87, "column": 1 }
+                  "begin": {
+                    "line": 63,
+                    "column": 7
+                  },
+                  "end": {
+                    "line": 87,
+                    "column": 1
+                  }
                 },
-                "body": { "line": 63, "column": 63 },
-                "parameters": ["viewMode"],
-                "breakpointLocation": { "line": 64, "column": 2 }
+                "parameters": [
+                  "viewMode"
+                ],
+                "body": {
+                  "line": 63,
+                  "column": 63
+                },
+                "breakpointLocation": {
+                  "line": 64,
+                  "column": 2
+                }
               }
             }
           },
@@ -26355,9 +27365,21 @@
           "sequenceId": "ExecutedStatement:14",
           "event": {
             "location": [
-              { "column": 1580, "line": 43, "sourceId": "47" },
-              { "line": 45761, "column": 4, "sourceId": "pp47" },
-              { "line": 60, "column": 2, "sourceId": "o47-585-c2bc7b-181a75" }
+              {
+                "column": 1580,
+                "line": 43,
+                "sourceId": "47"
+              },
+              {
+                "line": 45761,
+                "column": 4,
+                "sourceId": "pp47"
+              },
+              {
+                "line": 60,
+                "column": 2,
+                "sourceId": "o47-585-c2bc7b-181a75"
+              }
             ],
             "key": "return { type: \"dismiss_local_nag\", nag };\n}\n\nexport function setViewMode(viewMode: ViewMode): UIThu",
             "point": "24987928634145242102927702362161170",
@@ -26409,12 +27431,26 @@
               "functionOutline": {
                 "name": "dismissLocalNag",
                 "location": {
-                  "begin": { "line": 59, "column": 7 },
-                  "end": { "line": 61, "column": 1 }
+                  "begin": {
+                    "line": 59,
+                    "column": 7
+                  },
+                  "end": {
+                    "line": 61,
+                    "column": 1
+                  }
                 },
-                "body": { "line": 59, "column": 70 },
-                "parameters": ["nag"],
-                "breakpointLocation": { "line": 60, "column": 2 }
+                "parameters": [
+                  "nag"
+                ],
+                "body": {
+                  "line": 59,
+                  "column": 70
+                },
+                "breakpointLocation": {
+                  "line": 60,
+                  "column": 2
+                }
               }
             }
           },
@@ -26426,9 +27462,21 @@
           "sequenceId": "ExecutedStatement:14",
           "event": {
             "location": [
-              { "column": 7197, "line": 947, "sourceId": "47" },
-              { "line": 51309, "column": 8, "sourceId": "pp47" },
-              { "line": 52, "column": 6, "sourceId": "o47-644-0dd187-181a75" }
+              {
+                "column": 7197,
+                "line": 947,
+                "sourceId": "47"
+              },
+              {
+                "line": 51309,
+                "column": 8,
+                "sourceId": "pp47"
+              },
+              {
+                "line": 52,
+                "column": 6,
+                "sourceId": "o47-644-0dd187-181a75"
+              }
             ],
             "key": "return {\n        ...state,\n        localNags: state.localNags.includes(action.nag)\n          ? state",
             "point": "24987928634145274384729556475969805",
@@ -26996,12 +28044,27 @@
               "functionOutline": {
                 "name": "update",
                 "location": {
-                  "begin": { "line": 19, "column": 15 },
-                  "end": { "line": 64, "column": 1 }
+                  "begin": {
+                    "line": 19,
+                    "column": 15
+                  },
+                  "end": {
+                    "line": 64,
+                    "column": 1
+                  }
                 },
-                "body": { "line": 19, "column": 98 },
-                "parameters": ["state = syncInitialLayoutState", "action"],
-                "breakpointLocation": { "line": 20, "column": 2 }
+                "parameters": [
+                  "state = syncInitialLayoutState",
+                  "action"
+                ],
+                "body": {
+                  "line": 19,
+                  "column": 98
+                },
+                "breakpointLocation": {
+                  "line": 20,
+                  "column": 2
+                }
               }
             }
           },
@@ -27013,9 +28076,21 @@
           "sequenceId": "ExecutedStatement:14",
           "event": {
             "location": [
-              { "column": 7231, "line": 947, "sourceId": "47" },
-              { "line": 51311, "column": 33, "sourceId": "pp47" },
-              { "line": 54, "column": 35, "sourceId": "o47-644-0dd187-181a75" }
+              {
+                "column": 7231,
+                "line": 947,
+                "sourceId": "47"
+              },
+              {
+                "line": 51311,
+                "column": 33,
+                "sourceId": "pp47"
+              },
+              {
+                "line": 54,
+                "column": 35,
+                "sourceId": "o47-644-0dd187-181a75"
+              }
             ],
             "key": "includes(action.nag)\n          ? state.localNags\n          : [...state.localNags, action.nag],\n     ",
             "point": "24987928634145274384729556475969830",
@@ -27583,12 +28658,27 @@
               "functionOutline": {
                 "name": "update",
                 "location": {
-                  "begin": { "line": 19, "column": 15 },
-                  "end": { "line": 64, "column": 1 }
+                  "begin": {
+                    "line": 19,
+                    "column": 15
+                  },
+                  "end": {
+                    "line": 64,
+                    "column": 1
+                  }
                 },
-                "body": { "line": 19, "column": 98 },
-                "parameters": ["state = syncInitialLayoutState", "action"],
-                "breakpointLocation": { "line": 20, "column": 2 }
+                "parameters": [
+                  "state = syncInitialLayoutState",
+                  "action"
+                ],
+                "body": {
+                  "line": 19,
+                  "column": 98
+                },
+                "breakpointLocation": {
+                  "line": 20,
+                  "column": 2
+                }
               }
             }
           },
@@ -27600,9 +28690,21 @@
           "sequenceId": "ExecutedStatement:14",
           "event": {
             "location": [
-              { "column": 1763, "line": 43, "sourceId": "47" },
-              { "line": 45768, "column": 16, "sourceId": "pp47" },
-              { "line": 71, "column": 34, "sourceId": "o47-585-c2bc7b-181a75" }
+              {
+                "column": 1763,
+                "line": 43,
+                "sourceId": "47"
+              },
+              {
+                "line": 45768,
+                "column": 16,
+                "sourceId": "pp47"
+              },
+              {
+                "line": 71,
+                "column": 34,
+                "sourceId": "o47-585-c2bc7b-181a75"
+              }
             ],
             "key": "getSelectedPrimaryPanel(getState());\n      if (currentPrimaryPanel !== \"cypress\" && currentPrimaryPa",
             "point": "24987928634146721301218147306569932",
@@ -27918,12 +29020,26 @@
               "functionOutline": {
                 "name": "setViewMode",
                 "location": {
-                  "begin": { "line": 63, "column": 7 },
-                  "end": { "line": 87, "column": 1 }
+                  "begin": {
+                    "line": 63,
+                    "column": 7
+                  },
+                  "end": {
+                    "line": 87,
+                    "column": 1
+                  }
                 },
-                "body": { "line": 63, "column": 63 },
-                "parameters": ["viewMode"],
-                "breakpointLocation": { "line": 64, "column": 2 }
+                "parameters": [
+                  "viewMode"
+                ],
+                "body": {
+                  "line": 63,
+                  "column": 63
+                },
+                "breakpointLocation": {
+                  "line": 64,
+                  "column": 2
+                }
               }
             }
           },
@@ -27935,9 +29051,21 @@
           "sequenceId": "ExecutedStatement:14",
           "event": {
             "location": [
-              { "column": 1793, "line": 43, "sourceId": "47" },
-              { "line": 45768, "column": 47, "sourceId": "pp47" },
-              { "line": 71, "column": 58, "sourceId": "o47-585-c2bc7b-181a75" }
+              {
+                "column": 1793,
+                "line": 43,
+                "sourceId": "47"
+              },
+              {
+                "line": 45768,
+                "column": 47,
+                "sourceId": "pp47"
+              },
+              {
+                "line": 71,
+                "column": 58,
+                "sourceId": "o47-585-c2bc7b-181a75"
+              }
             ],
             "key": "getState());\n      if (currentPrimaryPanel !== \"cypress\" && currentPrimaryPanel !== \"tour\") {\n      ",
             "point": "24987928634146722454139651913416934",
@@ -28253,12 +29381,26 @@
               "functionOutline": {
                 "name": "setViewMode",
                 "location": {
-                  "begin": { "line": 63, "column": 7 },
-                  "end": { "line": 87, "column": 1 }
+                  "begin": {
+                    "line": 63,
+                    "column": 7
+                  },
+                  "end": {
+                    "line": 87,
+                    "column": 1
+                  }
                 },
-                "body": { "line": 63, "column": 63 },
-                "parameters": ["viewMode"],
-                "breakpointLocation": { "line": 64, "column": 2 }
+                "parameters": [
+                  "viewMode"
+                ],
+                "body": {
+                  "line": 63,
+                  "column": 63
+                },
+                "breakpointLocation": {
+                  "line": 64,
+                  "column": 2
+                }
               }
             }
           },
@@ -28270,9 +29412,21 @@
           "sequenceId": "ExecutedStatement:14",
           "event": {
             "location": [
-              { "column": 1798, "line": 43, "sourceId": "47" },
-              { "line": 45769, "column": 8, "sourceId": "pp47" },
-              { "line": 72, "column": 34, "sourceId": "o47-585-c2bc7b-181a75" }
+              {
+                "column": 1798,
+                "line": 43,
+                "sourceId": "47"
+              },
+              {
+                "line": 45769,
+                "column": 8,
+                "sourceId": "pp47"
+              },
+              {
+                "line": 72,
+                "column": 34,
+                "sourceId": "o47-585-c2bc7b-181a75"
+              }
             ],
             "key": "\"cypress\" && currentPrimaryPanel !== \"tour\") {\n        dispatch(setSelectedPrimaryPanel(\"explorer\"))",
             "point": "24987928634146724759982661127110909",
@@ -28588,12 +29742,26 @@
               "functionOutline": {
                 "name": "setViewMode",
                 "location": {
-                  "begin": { "line": 63, "column": 7 },
-                  "end": { "line": 87, "column": 1 }
+                  "begin": {
+                    "line": 63,
+                    "column": 7
+                  },
+                  "end": {
+                    "line": 87,
+                    "column": 1
+                  }
                 },
-                "body": { "line": 63, "column": 63 },
-                "parameters": ["viewMode"],
-                "breakpointLocation": { "line": 64, "column": 2 }
+                "parameters": [
+                  "viewMode"
+                ],
+                "body": {
+                  "line": 63,
+                  "column": 63
+                },
+                "breakpointLocation": {
+                  "line": 64,
+                  "column": 2
+                }
               }
             }
           },
@@ -28605,9 +29773,21 @@
           "sequenceId": "ExecutedStatement:15",
           "event": {
             "location": [
-              { "column": 17439, "line": 44, "sourceId": "48" },
-              { "line": 5402, "column": 14, "sourceId": "pp48" },
-              { "line": 48, "column": 34, "sourceId": "o48-108-b8b021-ac92b3" }
+              {
+                "column": 17439,
+                "line": 44,
+                "sourceId": "48"
+              },
+              {
+                "line": 5402,
+                "column": 14,
+                "sourceId": "pp48"
+              },
+              {
+                "line": 48,
+                "column": 34,
+                "sourceId": "o48-108-b8b021-ac92b3"
+              }
             ],
             "key": "recordingCapabilitiesCache.read(replayClient);\n\n    if (recordingCapabilities.supportsRepaintingGrap",
             "point": "24987928634156100317658330165150181",
@@ -31071,11 +32251,24 @@
               "functionOutline": {
                 "name": "UserOptions",
                 "location": {
-                  "begin": { "line": 18, "column": 15 },
-                  "end": { "line": 221, "column": 1 }
+                  "begin": {
+                    "line": 18,
+                    "column": 15
+                  },
+                  "end": {
+                    "line": 221,
+                    "column": 1
+                  }
                 },
                 "parameters": [],
-                "body": { "line": 18, "column": 38 }
+                "body": {
+                  "line": 18,
+                  "column": 38
+                },
+                "breakpointLocation": {
+                  "line": 19,
+                  "column": 23
+                }
               }
             }
           },
@@ -31087,9 +32280,21 @@
           "sequenceId": "ExecutedStatement:15",
           "event": {
             "location": [
-              { "column": 17453, "line": 44, "sourceId": "48" },
-              { "line": 5403, "column": 6, "sourceId": "pp48" },
-              { "line": 51, "column": 6, "sourceId": "o48-108-b8b021-ac92b3" }
+              {
+                "column": 17453,
+                "line": 44,
+                "sourceId": "48"
+              },
+              {
+                "line": 5403,
+                "column": 6,
+                "sourceId": "pp48"
+              },
+              {
+                "line": 51,
+                "column": 6,
+                "sourceId": "o48-108-b8b021-ac92b3"
+              }
             ],
             "key": "devLayoutOptions = (\n        <>\n          <div className=\"inactive-row group\">\n            <span cla",
             "point": "24987928634156114152716385447313932",
@@ -33553,11 +34758,24 @@
               "functionOutline": {
                 "name": "UserOptions",
                 "location": {
-                  "begin": { "line": 18, "column": 15 },
-                  "end": { "line": 221, "column": 1 }
+                  "begin": {
+                    "line": 18,
+                    "column": 15
+                  },
+                  "end": {
+                    "line": 221,
+                    "column": 1
+                  }
                 },
                 "parameters": [],
-                "body": { "line": 18, "column": 38 }
+                "body": {
+                  "line": 18,
+                  "column": 38
+                },
+                "breakpointLocation": {
+                  "line": 19,
+                  "column": 23
+                }
               }
             }
           },
@@ -33569,9 +34787,21 @@
           "sequenceId": "ExecutedStatement:15",
           "event": {
             "location": [
-              { "column": 17489, "line": 44, "sourceId": "48" },
-              { "line": 5405, "column": 15, "sourceId": "pp48" },
-              { "line": 52, "column": 8, "sourceId": "o48-108-b8b021-ac92b3" }
+              {
+                "column": 17489,
+                "line": 44,
+                "sourceId": "48"
+              },
+              {
+                "line": 5405,
+                "column": 15,
+                "sourceId": "pp48"
+              },
+              {
+                "line": 52,
+                "column": 8,
+                "sourceId": "o48-108-b8b021-ac92b3"
+              }
             ],
             "key": "<>\n          <div className=\"inactive-row group\">\n            <span className=\"flex-1 text-left\">Lay",
             "point": "24987928634156114152716385447313949",
@@ -36035,11 +37265,24 @@
               "functionOutline": {
                 "name": "UserOptions",
                 "location": {
-                  "begin": { "line": 18, "column": 15 },
-                  "end": { "line": 221, "column": 1 }
+                  "begin": {
+                    "line": 18,
+                    "column": 15
+                  },
+                  "end": {
+                    "line": 221,
+                    "column": 1
+                  }
                 },
                 "parameters": [],
-                "body": { "line": 18, "column": 38 }
+                "body": {
+                  "line": 18,
+                  "column": 38
+                },
+                "breakpointLocation": {
+                  "line": 19,
+                  "column": 23
+                }
               }
             }
           },
@@ -36051,9 +37294,21 @@
           "sequenceId": "ExecutedStatement:15",
           "event": {
             "location": [
-              { "column": 17522, "line": 44, "sourceId": "48" },
-              { "line": 5410, "column": 22, "sourceId": "pp48" },
-              { "line": 53, "column": 10, "sourceId": "o48-108-b8b021-ac92b3" }
+              {
+                "column": 17522,
+                "line": 44,
+                "sourceId": "48"
+              },
+              {
+                "line": 5410,
+                "column": 22,
+                "sourceId": "pp48"
+              },
+              {
+                "line": 53,
+                "column": 10,
+                "sourceId": "o48-108-b8b021-ac92b3"
+              }
             ],
             "key": "<div className=\"inactive-row group\">\n            <span className=\"flex-1 text-left\">Layout</span>\n\n ",
             "point": "24987928634156114152716385447313986",
@@ -38517,11 +39772,24 @@
               "functionOutline": {
                 "name": "UserOptions",
                 "location": {
-                  "begin": { "line": 18, "column": 15 },
-                  "end": { "line": 221, "column": 1 }
+                  "begin": {
+                    "line": 18,
+                    "column": 15
+                  },
+                  "end": {
+                    "line": 221,
+                    "column": 1
+                  }
                 },
                 "parameters": [],
-                "body": { "line": 18, "column": 38 }
+                "body": {
+                  "line": 18,
+                  "column": 38
+                },
+                "breakpointLocation": {
+                  "line": 19,
+                  "column": 23
+                }
               }
             }
           },
@@ -38533,9 +39801,21 @@
           "sequenceId": "ExecutedStatement:15",
           "event": {
             "location": [
-              { "column": 17581, "line": 44, "sourceId": "48" },
-              { "line": 5416, "column": 29, "sourceId": "pp48" },
-              { "line": 54, "column": 12, "sourceId": "o48-108-b8b021-ac92b3" }
+              {
+                "column": 17581,
+                "line": 44,
+                "sourceId": "48"
+              },
+              {
+                "line": 5416,
+                "column": 29,
+                "sourceId": "pp48"
+              },
+              {
+                "line": 54,
+                "column": 12,
+                "sourceId": "o48-108-b8b021-ac92b3"
+              }
             ],
             "key": "<span className=\"flex-1 text-left\">Layout</span>\n\n            <div className=\"flex flex-row items-ce",
             "point": "24987928634156114152716385447314017",
@@ -40999,11 +42279,24 @@
               "functionOutline": {
                 "name": "UserOptions",
                 "location": {
-                  "begin": { "line": 18, "column": 15 },
-                  "end": { "line": 221, "column": 1 }
+                  "begin": {
+                    "line": 18,
+                    "column": 15
+                  },
+                  "end": {
+                    "line": 221,
+                    "column": 1
+                  }
                 },
                 "parameters": [],
-                "body": { "line": 18, "column": 38 }
+                "body": {
+                  "line": 18,
+                  "column": 38
+                },
+                "breakpointLocation": {
+                  "line": 19,
+                  "column": 23
+                }
               }
             }
           },
@@ -41015,9 +42308,21 @@
           "sequenceId": "ExecutedStatement:15",
           "event": {
             "location": [
-              { "column": 17648, "line": 44, "sourceId": "48" },
-              { "line": 5421, "column": 29, "sourceId": "pp48" },
-              { "line": 56, "column": 12, "sourceId": "o48-108-b8b021-ac92b3" }
+              {
+                "column": 17648,
+                "line": 44,
+                "sourceId": "48"
+              },
+              {
+                "line": 5421,
+                "column": 29,
+                "sourceId": "pp48"
+              },
+              {
+                "line": 56,
+                "column": 12,
+                "sourceId": "o48-108-b8b021-ac92b3"
+              }
             ],
             "key": "<div className=\"flex flex-row items-center space-x-1\">\n              <div\n                className=",
             "point": "24987928634156117611480899267854987",
@@ -43481,11 +44786,24 @@
               "functionOutline": {
                 "name": "UserOptions",
                 "location": {
-                  "begin": { "line": 18, "column": 15 },
-                  "end": { "line": 221, "column": 1 }
+                  "begin": {
+                    "line": 18,
+                    "column": 15
+                  },
+                  "end": {
+                    "line": 221,
+                    "column": 1
+                  }
                 },
                 "parameters": [],
-                "body": { "line": 18, "column": 38 }
+                "body": {
+                  "line": 18,
+                  "column": 38
+                },
+                "breakpointLocation": {
+                  "line": 19,
+                  "column": 23
+                }
               }
             }
           },
@@ -43497,9 +44815,21 @@
           "sequenceId": "ExecutedStatement:15",
           "event": {
             "location": [
-              { "column": 17725, "line": 44, "sourceId": "48" },
-              { "line": 5427, "column": 36, "sourceId": "pp48" },
-              { "line": 57, "column": 14, "sourceId": "o48-108-b8b021-ac92b3" }
+              {
+                "column": 17725,
+                "line": 44,
+                "sourceId": "48"
+              },
+              {
+                "line": 5427,
+                "column": 36,
+                "sourceId": "pp48"
+              },
+              {
+                "line": 57,
+                "column": 14,
+                "sourceId": "o48-108-b8b021-ac92b3"
+              }
             ],
             "key": "<div\n                className={styles.LayoutButton}\n                data-test-id=\"ToggleVideoPlayer",
             "point": "24987928634156117611480899267855018",
@@ -45963,11 +47293,24 @@
               "functionOutline": {
                 "name": "UserOptions",
                 "location": {
-                  "begin": { "line": 18, "column": 15 },
-                  "end": { "line": 221, "column": 1 }
+                  "begin": {
+                    "line": 18,
+                    "column": 15
+                  },
+                  "end": {
+                    "line": 221,
+                    "column": 1
+                  }
                 },
                 "parameters": [],
-                "body": { "line": 18, "column": 38 }
+                "body": {
+                  "line": 18,
+                  "column": 38
+                },
+                "breakpointLocation": {
+                  "line": 19,
+                  "column": 23
+                }
               }
             }
           },
@@ -45979,9 +47322,21 @@
           "sequenceId": "ExecutedStatement:15",
           "event": {
             "location": [
-              { "column": 17747, "line": 44, "sourceId": "48" },
-              { "line": 5430, "column": 49, "sourceId": "pp48" },
-              { "line": 58, "column": 27, "sourceId": "o48-108-b8b021-ac92b3" }
+              {
+                "column": 17747,
+                "line": 44,
+                "sourceId": "48"
+              },
+              {
+                "line": 5430,
+                "column": 49,
+                "sourceId": "pp48"
+              },
+              {
+                "line": 58,
+                "column": 27,
+                "sourceId": "o48-108-b8b021-ac92b3"
+              }
             ],
             "key": "styles.LayoutButton}\n                data-test-id=\"ToggleVideoPlayerButton\"\n                data-tes",
             "point": "24987928634156117611480899267855052",
@@ -48445,11 +49800,24 @@
               "functionOutline": {
                 "name": "UserOptions",
                 "location": {
-                  "begin": { "line": 18, "column": 15 },
-                  "end": { "line": 221, "column": 1 }
+                  "begin": {
+                    "line": 18,
+                    "column": 15
+                  },
+                  "end": {
+                    "line": 221,
+                    "column": 1
+                  }
                 },
                 "parameters": [],
-                "body": { "line": 18, "column": 38 }
+                "body": {
+                  "line": 18,
+                  "column": 38
+                },
+                "breakpointLocation": {
+                  "line": 19,
+                  "column": 23
+                }
               }
             }
           },
@@ -48461,9 +49829,21 @@
           "sequenceId": "ExecutedStatement:15",
           "event": {
             "location": [
-              { "column": 17925, "line": 44, "sourceId": "48" },
-              { "line": 5438, "column": 51, "sourceId": "pp48" },
-              { "line": 64, "column": 16, "sourceId": "o48-108-b8b021-ac92b3" }
+              {
+                "column": 17925,
+                "line": 44,
+                "sourceId": "48"
+              },
+              {
+                "line": 5438,
+                "column": 51,
+                "sourceId": "pp48"
+              },
+              {
+                "line": 64,
+                "column": 16,
+                "sourceId": "o48-108-b8b021-ac92b3"
+              }
             ],
             "key": "<MaterialIcon\n                  className={styles.VideoIcon}\n                  data-icon-selected={!",
             "point": "24987928634156118764402403874702097",
@@ -50927,11 +52307,24 @@
               "functionOutline": {
                 "name": "UserOptions",
                 "location": {
-                  "begin": { "line": 18, "column": 15 },
-                  "end": { "line": 221, "column": 1 }
+                  "begin": {
+                    "line": 18,
+                    "column": 15
+                  },
+                  "end": {
+                    "line": 221,
+                    "column": 1
+                  }
                 },
                 "parameters": [],
-                "body": { "line": 18, "column": 38 }
+                "body": {
+                  "line": 18,
+                  "column": 38
+                },
+                "breakpointLocation": {
+                  "line": 19,
+                  "column": 23
+                }
               }
             }
           },
@@ -50943,9 +52336,21 @@
           "sequenceId": "ExecutedStatement:15",
           "event": {
             "location": [
-              { "column": 17946, "line": 44, "sourceId": "48" },
-              { "line": 5441, "column": 64, "sourceId": "pp48" },
-              { "line": 65, "column": 29, "sourceId": "o48-108-b8b021-ac92b3" }
+              {
+                "column": 17946,
+                "line": 44,
+                "sourceId": "48"
+              },
+              {
+                "line": 5441,
+                "column": 64,
+                "sourceId": "pp48"
+              },
+              {
+                "line": 65,
+                "column": 29,
+                "sourceId": "o48-108-b8b021-ac92b3"
+              }
             ],
             "key": "styles.VideoIcon}\n                  data-icon-selected={!videoPanelCollapsed ? \"\" : undefined}\n     ",
             "point": "24987928634156119917323908481549113",
@@ -53409,11 +54814,24 @@
               "functionOutline": {
                 "name": "UserOptions",
                 "location": {
-                  "begin": { "line": 18, "column": 15 },
-                  "end": { "line": 221, "column": 1 }
+                  "begin": {
+                    "line": 18,
+                    "column": 15
+                  },
+                  "end": {
+                    "line": 221,
+                    "column": 1
+                  }
                 },
                 "parameters": [],
-                "body": { "line": 18, "column": 38 }
+                "body": {
+                  "line": 18,
+                  "column": 38
+                },
+                "breakpointLocation": {
+                  "line": 19,
+                  "column": 23
+                }
               }
             }
           },
@@ -53425,9 +54843,21 @@
           "sequenceId": "ExecutedStatement:15",
           "event": {
             "location": [
-              { "column": 18043, "line": 44, "sourceId": "48" },
-              { "line": 5453, "column": 36, "sourceId": "pp48" },
-              { "line": 72, "column": 14, "sourceId": "o48-108-b8b021-ac92b3" }
+              {
+                "column": 18043,
+                "line": 44,
+                "sourceId": "48"
+              },
+              {
+                "line": 5453,
+                "column": 36,
+                "sourceId": "pp48"
+              },
+              {
+                "line": 72,
+                "column": 14,
+                "sourceId": "o48-108-b8b021-ac92b3"
+              }
             ],
             "key": "<div>\n                <div className={styles.VerticalDivider} />\n              </div>\n\n             ",
             "point": "24987928634156133752381963763712917",
@@ -55891,11 +57321,24 @@
               "functionOutline": {
                 "name": "UserOptions",
                 "location": {
-                  "begin": { "line": 18, "column": 15 },
-                  "end": { "line": 221, "column": 1 }
+                  "begin": {
+                    "line": 18,
+                    "column": 15
+                  },
+                  "end": {
+                    "line": 221,
+                    "column": 1
+                  }
                 },
                 "parameters": [],
-                "body": { "line": 18, "column": 38 }
+                "body": {
+                  "line": 18,
+                  "column": 38
+                },
+                "breakpointLocation": {
+                  "line": 19,
+                  "column": 23
+                }
               }
             }
           },
@@ -55907,9 +57350,21 @@
           "sequenceId": "ExecutedStatement:15",
           "event": {
             "location": [
-              { "column": 18069, "line": 44, "sourceId": "48" },
-              { "line": 5457, "column": 51, "sourceId": "pp48" },
-              { "line": 73, "column": 16, "sourceId": "o48-108-b8b021-ac92b3" }
+              {
+                "column": 18069,
+                "line": 44,
+                "sourceId": "48"
+              },
+              {
+                "line": 5457,
+                "column": 51,
+                "sourceId": "pp48"
+              },
+              {
+                "line": 73,
+                "column": 16,
+                "sourceId": "o48-108-b8b021-ac92b3"
+              }
             ],
             "key": "<div className={styles.VerticalDivider} />\n              </div>\n\n              <div\n                ",
             "point": "24987928634156133752381963763712945",
@@ -58373,11 +59828,24 @@
               "functionOutline": {
                 "name": "UserOptions",
                 "location": {
-                  "begin": { "line": 18, "column": 15 },
-                  "end": { "line": 221, "column": 1 }
+                  "begin": {
+                    "line": 18,
+                    "column": 15
+                  },
+                  "end": {
+                    "line": 221,
+                    "column": 1
+                  }
                 },
                 "parameters": [],
-                "body": { "line": 18, "column": 38 }
+                "body": {
+                  "line": 18,
+                  "column": 38
+                },
+                "breakpointLocation": {
+                  "line": 19,
+                  "column": 23
+                }
               }
             }
           },
@@ -58389,9 +59857,21 @@
           "sequenceId": "ExecutedStatement:15",
           "event": {
             "location": [
-              { "column": 18091, "line": 44, "sourceId": "48" },
-              { "line": 5460, "column": 64, "sourceId": "pp48" },
-              { "line": 73, "column": 32, "sourceId": "o48-108-b8b021-ac92b3" }
+              {
+                "column": 18091,
+                "line": 44,
+                "sourceId": "48"
+              },
+              {
+                "line": 5460,
+                "column": 64,
+                "sourceId": "pp48"
+              },
+              {
+                "line": 73,
+                "column": 32,
+                "sourceId": "o48-108-b8b021-ac92b3"
+              }
             ],
             "key": "styles.VerticalDivider} />\n              </div>\n\n              <div\n                className={style",
             "point": "24987928634156133752381963763712979",
@@ -60855,11 +62335,24 @@
               "functionOutline": {
                 "name": "UserOptions",
                 "location": {
-                  "begin": { "line": 18, "column": 15 },
-                  "end": { "line": 221, "column": 1 }
+                  "begin": {
+                    "line": 18,
+                    "column": 15
+                  },
+                  "end": {
+                    "line": 221,
+                    "column": 1
+                  }
                 },
                 "parameters": [],
-                "body": { "line": 18, "column": 38 }
+                "body": {
+                  "line": 18,
+                  "column": 38
+                },
+                "breakpointLocation": {
+                  "line": 19,
+                  "column": 23
+                }
               }
             }
           },
@@ -60871,9 +62364,21 @@
           "sequenceId": "ExecutedStatement:15",
           "event": {
             "location": [
-              { "column": 18121, "line": 44, "sourceId": "48" },
-              { "line": 5466, "column": 36, "sourceId": "pp48" },
-              { "line": 76, "column": 14, "sourceId": "o48-108-b8b021-ac92b3" }
+              {
+                "column": 18121,
+                "line": 44,
+                "sourceId": "48"
+              },
+              {
+                "line": 5466,
+                "column": 36,
+                "sourceId": "pp48"
+              },
+              {
+                "line": 76,
+                "column": 14,
+                "sourceId": "o48-108-b8b021-ac92b3"
+              }
             ],
             "key": "<div\n                className={styles.LayoutButton}\n                data-layout-option=\"ide\"\n      ",
             "point": "24987928634156139516989486797947912",
@@ -63337,11 +64842,24 @@
               "functionOutline": {
                 "name": "UserOptions",
                 "location": {
-                  "begin": { "line": 18, "column": 15 },
-                  "end": { "line": 221, "column": 1 }
+                  "begin": {
+                    "line": 18,
+                    "column": 15
+                  },
+                  "end": {
+                    "line": 221,
+                    "column": 1
+                  }
                 },
                 "parameters": [],
-                "body": { "line": 18, "column": 38 }
+                "body": {
+                  "line": 18,
+                  "column": 38
+                },
+                "breakpointLocation": {
+                  "line": 19,
+                  "column": 23
+                }
               }
             }
           },
@@ -63353,9 +64871,21 @@
           "sequenceId": "ExecutedStatement:15",
           "event": {
             "location": [
-              { "column": 18143, "line": 44, "sourceId": "48" },
-              { "line": 5469, "column": 49, "sourceId": "pp48" },
-              { "line": 77, "column": 27, "sourceId": "o48-108-b8b021-ac92b3" }
+              {
+                "column": 18143,
+                "line": 44,
+                "sourceId": "48"
+              },
+              {
+                "line": 5469,
+                "column": 49,
+                "sourceId": "pp48"
+              },
+              {
+                "line": 77,
+                "column": 27,
+                "sourceId": "o48-108-b8b021-ac92b3"
+              }
             ],
             "key": "styles.LayoutButton}\n                data-layout-option=\"ide\"\n                data-layout-option-sel",
             "point": "24987928634156139516989486797947946",
@@ -65819,11 +67349,24 @@
               "functionOutline": {
                 "name": "UserOptions",
                 "location": {
-                  "begin": { "line": 18, "column": 15 },
-                  "end": { "line": 221, "column": 1 }
+                  "begin": {
+                    "line": 18,
+                    "column": 15
+                  },
+                  "end": {
+                    "line": 221,
+                    "column": 1
+                  }
                 },
                 "parameters": [],
-                "body": { "line": 18, "column": 38 }
+                "body": {
+                  "line": 18,
+                  "column": 38
+                },
+                "breakpointLocation": {
+                  "line": 19,
+                  "column": 23
+                }
               }
             }
           },
@@ -65835,9 +67378,21 @@
           "sequenceId": "ExecutedStatement:15",
           "event": {
             "location": [
-              { "column": 18344, "line": 44, "sourceId": "48" },
-              { "line": 5477, "column": 51, "sourceId": "pp48" },
-              { "line": 84, "column": 16, "sourceId": "o48-108-b8b021-ac92b3" }
+              {
+                "column": 18344,
+                "line": 44,
+                "sourceId": "48"
+              },
+              {
+                "line": 5477,
+                "column": 51,
+                "sourceId": "pp48"
+              },
+              {
+                "line": 84,
+                "column": 16,
+                "sourceId": "o48-108-b8b021-ac92b3"
+              }
             ],
             "key": "<Icon filename=\"dock-bottom-right\" className={styles.LayoutIcon} />\n              </div>\n\n          ",
             "point": "24987928634156140669910991404794971",
@@ -68301,11 +69856,24 @@
               "functionOutline": {
                 "name": "UserOptions",
                 "location": {
-                  "begin": { "line": 18, "column": 15 },
-                  "end": { "line": 221, "column": 1 }
+                  "begin": {
+                    "line": 18,
+                    "column": 15
+                  },
+                  "end": {
+                    "line": 221,
+                    "column": 1
+                  }
                 },
                 "parameters": [],
-                "body": { "line": 18, "column": 38 }
+                "body": {
+                  "line": 18,
+                  "column": 38
+                },
+                "breakpointLocation": {
+                  "line": 19,
+                  "column": 23
+                }
               }
             }
           },
@@ -68317,9 +69885,21 @@
           "sequenceId": "ExecutedStatement:15",
           "event": {
             "location": [
-              { "column": 18394, "line": 44, "sourceId": "48" },
-              { "line": 5481, "column": 64, "sourceId": "pp48" },
-              { "line": 84, "column": 62, "sourceId": "o48-108-b8b021-ac92b3" }
+              {
+                "column": 18394,
+                "line": 44,
+                "sourceId": "48"
+              },
+              {
+                "line": 5481,
+                "column": 64,
+                "sourceId": "pp48"
+              },
+              {
+                "line": 84,
+                "column": 62,
+                "sourceId": "o48-108-b8b021-ac92b3"
+              }
             ],
             "key": "styles.LayoutIcon} />\n              </div>\n\n              <div\n                className={styles.Lay",
             "point": "24987928634156141822832496011641987",
@@ -70783,11 +72363,24 @@
               "functionOutline": {
                 "name": "UserOptions",
                 "location": {
-                  "begin": { "line": 18, "column": 15 },
-                  "end": { "line": 221, "column": 1 }
+                  "begin": {
+                    "line": 18,
+                    "column": 15
+                  },
+                  "end": {
+                    "line": 221,
+                    "column": 1
+                  }
                 },
                 "parameters": [],
-                "body": { "line": 18, "column": 38 }
+                "body": {
+                  "line": 18,
+                  "column": 38
+                },
+                "breakpointLocation": {
+                  "line": 19,
+                  "column": 23
+                }
               }
             }
           },
@@ -70799,9 +72392,21 @@
           "sequenceId": "ExecutedStatement:15",
           "event": {
             "location": [
-              { "column": 18419, "line": 44, "sourceId": "48" },
-              { "line": 5487, "column": 36, "sourceId": "pp48" },
-              { "line": 87, "column": 14, "sourceId": "o48-108-b8b021-ac92b3" }
+              {
+                "column": 18419,
+                "line": 44,
+                "sourceId": "48"
+              },
+              {
+                "line": 5487,
+                "column": 36,
+                "sourceId": "pp48"
+              },
+              {
+                "line": 87,
+                "column": 14,
+                "sourceId": "o48-108-b8b021-ac92b3"
+              }
             ],
             "key": "<div\n                className={styles.LayoutButton}\n                data-layout-option=\"left\"\n     ",
             "point": "24987928634156155657890551293805752",
@@ -73265,11 +74870,24 @@
               "functionOutline": {
                 "name": "UserOptions",
                 "location": {
-                  "begin": { "line": 18, "column": 15 },
-                  "end": { "line": 221, "column": 1 }
+                  "begin": {
+                    "line": 18,
+                    "column": 15
+                  },
+                  "end": {
+                    "line": 221,
+                    "column": 1
+                  }
                 },
                 "parameters": [],
-                "body": { "line": 18, "column": 38 }
+                "body": {
+                  "line": 18,
+                  "column": 38
+                },
+                "breakpointLocation": {
+                  "line": 19,
+                  "column": 23
+                }
               }
             }
           },
