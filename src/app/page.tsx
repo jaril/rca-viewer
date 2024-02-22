@@ -157,7 +157,9 @@ function Point({ point, focusLines }: { point: any; focusLines: number[] }) {
     <div className="flex flex-row font-mono text-xs text-gray-600">
       {point.breakable ? (
         <div className="flex flex-row">
-          <div className="text-green-300">[{point.altHits || 0}]</div>
+          <div className="text-green-300" title={point.altHits}>
+            [{point.altHits}]
+          </div>
           {/* <div className="text-green-300">[{point.altHits || "?"}]</div> */}
           <div className="text-red-300">[{point.hits}]</div>
         </div>
