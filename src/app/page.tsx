@@ -105,6 +105,8 @@ function GroupedFunction({ groupedFn }: { groupedFn: _GroupedFunction }) {
 
 function Statement({ statement }: { statement: _Statement }) {
   const [expanded, setExpanded] = useState(false);
+  const { line, column } =
+    statement.event.location[statement.event.location.length - 1];
 
   const focusLines = [statement.event.description.line];
   return (
@@ -116,6 +118,9 @@ function Statement({ statement }: { statement: _Statement }) {
         <FunctionOutline
           outline={statement.event.description.functionOutline}
         />
+        <div>
+          {line}:{column}
+        </div>
       </div>
       {expanded ? (
         <FramePoints
