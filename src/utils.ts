@@ -7,14 +7,31 @@ export function groupSequences(discrepancies: any[]) {
     }
 
     const group = grouped[d.eventKind];
+    const functionName = d.event.description.functionOutline.name;
+    const sequence = group[d.sequenceId];
+
     if (!group[d.sequenceId]) {
+      const fns: Record<string, any> = {};
+      fns[functionName] = d.event;
+
       group[d.sequenceId] = {
         sequenceId: d.sequenceId,
         kind: d.kind,
         discrepancies: [d],
+        functions: {},
       };
     } else {
       group[d.sequenceId].discrepancies.push(d);
+    }
+
+    const event = d.event;
+    if (!group[d.sequenceId].functions[functionName]) {
+      group[d.sequenceId].functions[functionName] = {
+        name: functionName,
+        events: [event]
+      }
+    } else {
+      group[d.sequenceId].functions[functionName].events.push(event);
     }
   });
 
