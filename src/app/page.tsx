@@ -1,6 +1,7 @@
 "use client";
 import { groupSequences } from "@/utils";
 import { useEffect, useState } from "react";
+import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
 
 const data = require("../data/results.json");
 
@@ -28,28 +29,34 @@ export default function Home() {
   const { ExecutedStatement: sequences } = groupSequences(executedStatements);
 
   useEffect(() => {}, []);
+
   return (
-    <div className="flex flex-row overflow-hidden h-full">
-      <div className="p-4 gap-4 flex flex-col overflow-y-scroll h-full text-sm">
-        <div className="flex flex-col gap-4">
-          {Object.values(sequences).map((s, i) => (
-            <Sequence
-              sequence={s}
-              key={i}
-              functionName={functionName}
-              setFunctionName={setFunctionName}
-              sequenceId={sequenceId}
-              setSequenceId={setSequenceId}
-            />
-          ))}
+    <PanelGroup autoSaveId="example" direction="horizontal">
+      <Panel defaultSize={25}>
+        <div className="p-4 gap-4 flex flex-col overflow-y-scroll h-full text-sm">
+          <div className="flex flex-col gap-4">
+            {Object.values(sequences).map((s, i) => (
+              <Sequence
+                sequence={s}
+                key={i}
+                functionName={functionName}
+                setFunctionName={setFunctionName}
+                sequenceId={sequenceId}
+                setSequenceId={setSequenceId}
+              />
+            ))}
+          </div>
         </div>
-      </div>
-      <Viewer
-        functionName={functionName}
-        sequenceId={sequenceId}
-        sequences={sequences}
-      />
-    </div>
+      </Panel>
+      <PanelResizeHandle />
+      <Panel>
+        <Viewer
+          functionName={functionName}
+          sequenceId={sequenceId}
+          sequences={sequences}
+        />
+      </Panel>
+    </PanelGroup>
   );
 }
 
@@ -73,7 +80,7 @@ function Viewer({
   const focusLines = fn.events.map((e: any) => e.description.line);
 
   return (
-    <div className="flex flex-row flex-grow items-center overflow-auto">
+    <div className="flex flex-row flex-grow items-center">
       <FramePoints
         points={firstEvent.description.framePoints}
         focusLines={focusLines}
@@ -97,10 +104,10 @@ function Sequence({
 }) {
   return (
     <div>
-      <div className="text-gray-500">
+      <div className="text-gray-500 truncate">
         {sequence.kind} {sequence.sequenceId}
       </div>
-      <div className="pl-4">
+      <div className="pl-4 truncate">
         {Object.values(sequence.functions).map((fn, i) => (
           <GroupedFunction
             key={i}
@@ -135,11 +142,9 @@ function GroupedFunction({
   };
 
   return (
-    <div>
-      <button className="flex flex-row gap-2" onClick={onClick}>
-        {groupedFn.name}
-      </button>
-    </div>
+    <button className="truncate" onClick={onClick}>
+      {groupedFn.name}
+    </button>
   );
 }
 
