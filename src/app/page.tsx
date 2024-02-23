@@ -19,48 +19,81 @@ type _GroupedFunction = {
 };
 
 export default function Home() {
-  const [groupBy, setGroupBy] = useState<"function" | "discrepancy">(
-    "discrepancy"
-  );
+  const [sequenceId, setSequenceId] = useState<string | null>(null);
+  const [functionName, setFunctionName] = useState<string | null>(null);
   const discrepancies = data.discrepancies[0].discrepancies;
   const executedStatements = discrepancies.filter(
-    (d) => d.eventKind === "ExecutedStatement"
+    (d: any) => d.eventKind === "ExecutedStatement"
   );
   const { ExecutedStatement: sequences } = groupSequences(executedStatements);
 
   useEffect(() => {}, []);
   return (
-    <div className="p-4 gap-4 flex flex-col">
-      <div className="flex flex-row gap-2">
-        <button
-          className={groupBy === "discrepancy" ? "opacity-100" : "opacity-50"}
-          onClick={() => setGroupBy("discrepancy")}
-        >
-          By Discrepancy
-        </button>
-        <div>|</div>
-        <button
-          className={groupBy === "function" ? "opacity-100" : "opacity-50"}
-          onClick={() => setGroupBy("function")}
-        >
-          By Function
-        </button>
+    <div className="flex flex-row overflow-hidden h-full">
+      <div className="p-4 gap-4 flex flex-col overflow-y-scroll h-full text-sm">
+        <div className="flex flex-col gap-4">
+          {Object.values(sequences).map((s, i) => (
+            <Sequence
+              sequence={s}
+              key={i}
+              functionName={functionName}
+              setFunctionName={setFunctionName}
+              sequenceId={sequenceId}
+              setSequenceId={setSequenceId}
+            />
+          ))}
+        </div>
       </div>
-      <div className="flex flex-col gap-4">
-        {Object.values(sequences).map((s, i) => (
-          <Sequence sequence={s} key={i} groupBy={groupBy} />
-        ))}
-      </div>
+      <Viewer
+        functionName={functionName}
+        sequenceId={sequenceId}
+        sequences={sequences}
+      />
+    </div>
+  );
+}
+
+function Viewer({
+  functionName,
+  sequenceId,
+  sequences,
+}: {
+  functionName: string | null;
+  sequenceId: string | null;
+  sequences: Record<string, any>;
+}) {
+  if (!sequenceId || !functionName) {
+    return <div>Pick something</div>;
+  }
+
+  const sequence = sequences[sequenceId];
+  const fn = sequence.functions[functionName];
+
+  const firstEvent = fn.events[0];
+  const focusLines = fn.events.map((e: any) => e.description.line);
+
+  return (
+    <div className="flex flex-row flex-grow items-center overflow-auto">
+      <FramePoints
+        points={firstEvent.description.framePoints}
+        focusLines={focusLines}
+      />
     </div>
   );
 }
 
 function Sequence({
   sequence,
-  groupBy,
+  functionName,
+  setFunctionName,
+  sequenceId,
+  setSequenceId,
 }: {
   sequence: _Sequence;
-  groupBy: "discrepancy" | "function";
+  functionName: string | null;
+  setFunctionName: (name: string | null) => void;
+  sequenceId: string | null;
+  setSequenceId: (name: string | null) => void;
 }) {
   return (
     <div>
@@ -68,72 +101,46 @@ function Sequence({
         {sequence.kind} {sequence.sequenceId}
       </div>
       <div className="pl-4">
-        {groupBy === "discrepancy"
-          ? sequence.discrepancies.map((s, i) => (
-              <Statement statement={s} key={i} />
-            ))
-          : Object.values(sequence.functions).map((fn, i) => (
-              <GroupedFunction key={i} groupedFn={fn} />
-            ))}
+        {Object.values(sequence.functions).map((fn, i) => (
+          <GroupedFunction
+            key={i}
+            groupedFn={fn}
+            selectedFunctionName={functionName}
+            setFunctionName={setFunctionName}
+            sequenceId={sequence.sequenceId}
+            setSequenceId={setSequenceId}
+          />
+        ))}
       </div>
     </div>
   );
 }
 
-function GroupedFunction({ groupedFn }: { groupedFn: _GroupedFunction }) {
-  const [expanded, setExpanded] = useState(false);
-  const firstEvent = groupedFn.events[0];
-  const focusLines = groupedFn.events.map((e) => e.description.line);
+function GroupedFunction({
+  groupedFn,
+  selectedFunctionName,
+  setFunctionName,
+  sequenceId,
+  setSequenceId,
+}: {
+  groupedFn: _GroupedFunction;
+  selectedFunctionName: string | null;
+  setFunctionName: (name: string | null) => void;
+  sequenceId: string;
+  setSequenceId: (name: string | null) => void;
+}) {
+  const onClick = () => {
+    setFunctionName(groupedFn.name);
+    setSequenceId(sequenceId);
+  };
 
   return (
     <div>
-      <div className="flex flex-row gap-2">
-        <button className="font-mono" onClick={() => setExpanded(!expanded)}>
-          {expanded ? "▼" : "▶"}
-        </button>
-        <div>{groupedFn.name}</div>
-      </div>
-      {expanded ? (
-        <FramePoints
-          points={firstEvent.description.framePoints}
-          focusLines={focusLines}
-        />
-      ) : null}
+      <button className="flex flex-row gap-2" onClick={onClick}>
+        {groupedFn.name}
+      </button>
     </div>
   );
-}
-
-function Statement({ statement }: { statement: _Statement }) {
-  const [expanded, setExpanded] = useState(false);
-  const { line, column } =
-    statement.event.location[statement.event.location.length - 1];
-
-  const focusLines = [statement.event.description.line];
-  return (
-    <div className="flex flex-col gap-2">
-      <div className="flex flex-row gap-2">
-        <button className="font-mono" onClick={() => setExpanded(!expanded)}>
-          {expanded ? "▼" : "▶"}
-        </button>
-        <FunctionOutline
-          outline={statement.event.description.functionOutline}
-        />
-        <div>
-          {line}:{column}
-        </div>
-      </div>
-      {expanded ? (
-        <FramePoints
-          points={statement.event.description.framePoints}
-          focusLines={focusLines}
-        />
-      ) : null}
-    </div>
-  );
-}
-
-function FunctionOutline({ outline }: { outline: any }) {
-  return <div>{outline.name}</div>;
 }
 
 function FramePoints({
@@ -144,7 +151,7 @@ function FramePoints({
   focusLines: number[];
 }) {
   return (
-    <div className="pl-4 overflow-auto border-l-gray-700 border-l">
+    <div className="pl-4 overflow-auto">
       {points.map((p, i) => (
         <Point key={i} point={p} focusLines={focusLines} />
       ))}
@@ -160,7 +167,6 @@ function Point({ point, focusLines }: { point: any; focusLines: number[] }) {
           <div className="text-green-300" title={point.altHits}>
             [{point.altHits}]
           </div>
-          {/* <div className="text-green-300">[{point.altHits || "?"}]</div> */}
           <div className="text-red-300">[{point.hits}]</div>
         </div>
       ) : (
