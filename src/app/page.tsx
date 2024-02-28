@@ -80,7 +80,7 @@ function Viewer({
   const focusLines = fn.events.map((e: any) => e.description.line);
 
   return (
-    <div className="flex flex-row flex-grow items-center">
+    <div className="flex flex-row flex-grow items-center overflow-auto">
       <FramePoints
         points={firstEvent.description.framePoints}
         focusLines={focusLines}
@@ -156,7 +156,7 @@ function FramePoints({
   focusLines: number[];
 }) {
   return (
-    <div className="pl-4 overflow-auto">
+    <div className="overflow-auto">
       {points.map((p, i) => (
         <Point key={i} point={p} focusLines={focusLines} />
       ))}
@@ -169,22 +169,37 @@ function Point({ point, focusLines }: { point: any; focusLines: number[] }) {
     <div className="flex flex-row font-mono text-xs text-gray-600">
       {point.breakable ? (
         <div className="flex flex-row">
-          <div className="text-green-300" title={point.altHits}>
-            [{point.altHits}]
+          <div
+            className="bg-green-800 text-white justify-center flex"
+            title={point.altHits}
+            style={{ minWidth: "1rem" }}
+          >
+            {point.altHits}
           </div>
-          <div className="text-red-300">[{point.hits}]</div>
+          <div
+            className="bg-red-800 text-white justify-center flex"
+            style={{ minWidth: "1rem" }}
+          >
+            {point.hits}
+          </div>
         </div>
       ) : (
-        <div className="flex-shrink-0 invisible">------</div>
+        <div
+          className="flex-shrink-0 invisible"
+          style={{ minWidth: "2rem" }}
+        ></div>
       )}
       <div
         className={`flex flex-row ${
           focusLines.includes(point.location.line) ? "text-white" : ""
         }`}
       >
-        <div>|</div>
-        <div>({point.location.line})</div>
-        <div>|</div>
+        <div
+          style={{ minWidth: "2.5rem" }}
+          className="flex justify-end bg-gray-800 px-1"
+        >
+          {point.location.line}
+        </div>
         <div className="whitespace-pre">{point.text}</div>
       </div>
     </div>
