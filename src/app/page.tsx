@@ -1,8 +1,10 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 import { groupSequences } from "@/utils";
 import { useEffect, useState } from "react";
 import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
 
+// Promise example
 const data = require("../data/results.json");
 
 type _Statement = any;
@@ -27,6 +29,8 @@ export default function Home() {
     (d: any) => d.eventKind === "ExecutedStatement"
   );
   const { ExecutedStatement: sequences } = groupSequences(executedStatements);
+
+  console.log({ data });
 
   useEffect(() => {}, []);
 
@@ -69,22 +73,40 @@ function Viewer({
   sequenceId: string | null;
   sequences: Record<string, any>;
 }) {
+  const [split, setSplit] = useState(true);
+
   if (!sequenceId || !functionName) {
     return <div>Pick something</div>;
   }
 
   const sequence = sequences[sequenceId];
   const fn = sequence.functions[functionName];
+  const kind = sequence.kind;
 
   const firstEvent = fn.events[0];
   const focusLines = fn.events.map((e: any) => e.description.line);
 
   return (
-    <div className="flex flex-row flex-grow items-center overflow-auto">
-      <FramePoints
-        points={firstEvent.description.framePoints}
-        focusLines={focusLines}
-      />
+    <div className="flex flex-col flex-grow overflow-auto gap-4 p-4">
+      <div className="text-xs gap-2 flex">
+        <div>View:</div>
+        <button onClick={() => setSplit(true)}>split</button>
+        <button onClick={() => setSplit(false)}>side-by-side</button>
+      </div>
+      <div>{fn.name}</div>
+      {split ? (
+        <SplitFrame
+          frame={firstEvent.description.frame}
+          kind={kind}
+          focusLines={focusLines}
+        />
+      ) : (
+        <SideToSideFrame
+          kind={kind}
+          frame={firstEvent.description.frame}
+          focusLines={focusLines}
+        />
+      )}
     </div>
   );
 }
@@ -148,45 +170,129 @@ function GroupedFunction({
   );
 }
 
-function FramePoints({
-  points,
+function SideToSideFrame({
+  frame,
+  kind,
   focusLines,
 }: {
-  points: any[];
+  frame: any;
+  kind: string;
   focusLines: number[];
 }) {
+  console.log({ frame, focusLines });
+  const failing = kind === "Missing" ? frame.otherPoints : frame.points;
+  const passing = kind === "Missing" ? frame.points : frame.otherPoints;
+
   return (
-    <div className="overflow-auto">
-      {points.map((p, i) => (
-        <Point key={i} point={p} focusLines={focusLines} />
-      ))}
+    <div className="overflow-auto flex flex-row gap-4">
+      <div>
+        {failing.map((p, i) => (
+          <Point
+            key={i}
+            point={p}
+            altPoint={passing[i]}
+            focusLines={focusLines}
+            sideToSide
+          />
+        ))}
+      </div>
     </div>
   );
 }
 
-function Point({ point, focusLines }: { point: any; focusLines: number[] }) {
+function SplitFrame({
+  frame,
+  kind,
+  focusLines,
+}: {
+  frame: any;
+  kind: string;
+  focusLines: number[];
+}) {
+  console.log({ frame, focusLines });
+  const failing = kind === "Missing" ? frame.otherPoints : frame.points;
+  const passing = kind === "Missing" ? frame.points : frame.otherPoints;
+
   return (
-    <div className="flex flex-row font-mono text-xs text-gray-600">
-      {point.breakable ? (
-        <div className="flex flex-row">
-          <div
-            className="bg-green-800 text-white justify-center flex"
-            title={point.altHits}
-            style={{ minWidth: "1rem" }}
-          >
-            {point.altHits}
-          </div>
+    <div className="overflow-auto flex flex-row gap-4">
+      <div>
+        {failing.map((p, i) => (
+          <Point key={i} point={p} focusLines={focusLines} failing={true} />
+        ))}
+      </div>
+      <div>
+        {passing.map((p, i) => (
+          <Point key={i} point={p} focusLines={focusLines} failing={false} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function Point({
+  point,
+  altPoint,
+  focusLines,
+  failing,
+  sideToSide,
+}: {
+  point: any;
+  altPoint: any;
+  focusLines: number[];
+  failing?: Boolean;
+  sideToSide?: Boolean;
+}) {
+  let line;
+
+  if (sideToSide) {
+    line = (
+      <div className="flex flex-row">
+        <div
+          className="bg-red-800 text-white justify-center flex"
+          style={{ minWidth: "1rem" }}
+        >
+          {point.hits}
+        </div>
+        <div
+          className="bg-green-800 text-white justify-center flex"
+          title={point.altHits}
+          style={{ minWidth: "1rem" }}
+        >
+          {altPoint.hits}
+        </div>
+      </div>
+    );
+  } else {
+    line = (
+      <div className="flex flex-row">
+        {failing ? (
           <div
             className="bg-red-800 text-white justify-center flex"
             style={{ minWidth: "1rem" }}
           >
             {point.hits}
           </div>
-        </div>
+        ) : (
+          <div
+            className="bg-green-800 text-white justify-center flex"
+            title={point.altHits}
+            style={{ minWidth: "1rem" }}
+          >
+            {point.hits}
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  return (
+    <div className="flex flex-row font-mono text-xs text-gray-600">
+      {point.breakable ? (
+        line
       ) : (
         <div
           className="flex-shrink-0 invisible"
-          style={{ minWidth: "2rem" }}
+          style={{ minWidth: sideToSide ? "2rem" : "1rem" }}
         ></div>
       )}
       <div

@@ -7,8 +7,7 @@ export function groupSequences(discrepancies: any[]) {
     }
 
     const group = grouped[d.eventKind];
-    const functionName = d.event.description.functionOutline.name;
-    const sequence = group[d.sequenceId];
+    const functionName = d.event.description.frame.functionName;
 
     if (!group[d.sequenceId]) {
       const fns: Record<string, any> = {};
