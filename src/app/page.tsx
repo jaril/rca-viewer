@@ -1,11 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
-import { groupSequences } from "@/utils";
+import { groupSequences, isSameLocation } from "@/utils";
 import { useEffect, useState } from "react";
 import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
 
-// Promise example
-const data = require("../data/results.json");
+// // Promise example
+// const data = require("../data/results.json");
+// Exception example
+const data = require("../data/results2.json");
 
 type _Statement = any;
 type _Sequence = {
@@ -30,9 +32,8 @@ export default function Home() {
   );
   const { ExecutedStatement: sequences } = groupSequences(executedStatements);
 
-  console.log({ data });
-
   useEffect(() => {}, []);
+  const exceptions = data.discrepancies[0].exceptions;
 
   return (
     <PanelGroup autoSaveId="example" direction="horizontal">
@@ -58,6 +59,7 @@ export default function Home() {
           functionName={functionName}
           sequenceId={sequenceId}
           sequences={sequences}
+          exceptions={exceptions}
         />
       </Panel>
     </PanelGroup>
@@ -68,10 +70,12 @@ function Viewer({
   functionName,
   sequenceId,
   sequences,
+  exceptions,
 }: {
   functionName: string | null;
   sequenceId: string | null;
   sequences: Record<string, any>;
+  exceptions: any[];
 }) {
   const [split, setSplit] = useState(true);
 
@@ -85,6 +89,12 @@ function Viewer({
 
   const firstEvent = fn.events[0];
   const focusLines = fn.events.map((e: any) => e.description.line);
+  const matches = exceptions.filter((e: any) => {
+    return isSameLocation(
+      e.location[0],
+      sequence.discrepancies[0].event.location[0]
+    );
+  });
 
   return (
     <div className="flex flex-col flex-grow overflow-auto gap-4 p-4">
@@ -94,6 +104,7 @@ function Viewer({
         <button onClick={() => setSplit(false)}>side-by-side</button>
       </div>
       <div>{fn.name}</div>
+      <Exceptions exceptions={matches} />
       {split ? (
         <SplitFrame
           frame={firstEvent.description.frame}
@@ -107,6 +118,36 @@ function Viewer({
           focusLines={focusLines}
         />
       )}
+    </div>
+  );
+}
+
+function getPreviewValue(error: any, key: string) {
+  return error.preview.getterValues.find((v: any) => v.name === key).value;
+}
+
+function Exceptions({ exceptions }: { exceptions: any[] }) {
+  if (!exceptions.length) {
+    return null;
+  }
+
+  return (
+    <div className="text-sm">
+      {exceptions.map((e, i) => {
+        const name = getPreviewValue(e.error, "name");
+        const message = getPreviewValue(e.error, "message");
+        const stack = getPreviewValue(e.error, "stack");
+
+        return (
+          <div key={i}>
+            <div className="flex flex-row gap-2">
+              <div>{name}</div>
+              <div>{message}</div>
+            </div>
+            <div>{stack}</div>
+          </div>
+        );
+      })}
     </div>
   );
 }
@@ -179,7 +220,6 @@ function SideToSideFrame({
   kind: string;
   focusLines: number[];
 }) {
-  console.log({ frame, focusLines });
   const failing = kind === "Missing" ? frame.otherPoints : frame.points;
   const passing = kind === "Missing" ? frame.points : frame.otherPoints;
 
@@ -209,7 +249,6 @@ function SplitFrame({
   kind: string;
   focusLines: number[];
 }) {
-  console.log({ frame, focusLines });
   const failing = kind === "Missing" ? frame.otherPoints : frame.points;
   const passing = kind === "Missing" ? frame.points : frame.otherPoints;
 

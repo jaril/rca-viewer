@@ -36,3 +36,7 @@ export function groupSequences(discrepancies: any[]) {
 
   return grouped;
 }
+
+export function isSameLocation(a: any, b: any) {
+  return a.line === b.line && a.column === b.column && a.sourceId === b.sourceId;
+}
